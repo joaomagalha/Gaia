@@ -1,625 +1,662 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="Css/fonts.css">
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="icon" href="Imagens/Logo/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gaia Soluções Ambientais — CAR, licenciamentos, laudos e consultoria ambiental para propriedades rurais e empresas em Mato Grosso.">
 
-    <title>Gaia</title>
+  <title>Gaia Soluções Ambientais</title>
+
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Css/fonts.css">
+  <link rel="stylesheet" href="Css/variables.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/responsivo.css">
+
+  <link rel="icon" href="Imagens/Logo/favicon.png" type="image/png">
 </head>
 <body>
-    <div id="preloader"></div>
 
-    <div class="headerImg flex">
+  <!-- =====================
+       NAVBAR
+  ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
 
-        <header class="header" id="top">
-            <nav class="headerNav flex">
-                <img src="Imagens/Logo/Logo Branca - Svg.svg" alt="Logo da empresa gaia" class="headerNavLogo">
-                <button class="headerNavBtn" aria-label="Abrir menu" type="button" id="menuBtn">
-                    <i class="fa-solid fa-bars headerNavBtnIcon white"></i>
-                </button>
-            </nav>
-        </header>
+      <a href="/" class="navbar__logo" aria-label="Gaia Soluções Ambientais — página inicial">
+        <img src="Imagens/Logo/Logo Branca - Svg.svg" alt="Gaia Soluções Ambientais" class="navbar__logo-img">
+      </a>
 
-        <div class="mobileMenu" id="mobileMenu">
-
-            <button class="headerNavBtn mobileMenuClose" aria-label="Fechar menu" type="button" id="closeBtn">
-                <i class="fa-solid fa-xmark white headerNavBtnIcon"></i>
+      <nav class="navbar__nav" aria-label="Navegação principal">
+        <ul class="navbar__links">
+          <li class="navbar__item navbar__item--dropdown">
+            <button class="navbar__link navbar__link--dropdown" aria-expanded="false" aria-haspopup="true">
+              Serviços <i class="fa-solid fa-chevron-down navbar__chevron" aria-hidden="true"></i>
             </button>
+            <ul class="navbar__dropdown" role="menu">
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Cadastro%20Ambiental%20Rural." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Cadastro Ambiental Rural</a></li>
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Licenciamento%20Ambiental." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Licenciamento Ambiental</a></li>
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Fitofisionomias." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Laudo de Fitofisionomias</a></li>
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Hidrografia." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Laudo de Hidrografia</a></li>
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Plantio%20de%20Eucalipto." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Plantio de Eucalipto</a></li>
+              <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Consultoria%20Ambiental." class="navbar__dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Consultoria Ambiental</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item"><a href="projetos/" class="navbar__link">Projetos</a></li>
+          <li class="navbar__item"><a href="contato/" class="navbar__link">Contato</a></li>
+        </ul>
+      </nav>
 
-            <img src="Imagens/Logo/Logo Branca - Svg.svg" alt="Logo Branca da Gaia" class="mobileMenuLogo">
+      <div class="navbar__actions">
+        <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+           class="btn btn--primary navbar__cta"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Falar com especialista no WhatsApp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Falar no WhatsApp
+        </a>
 
-            <div class="mobileMenuContainer">
+        <button class="navbar__mobile-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
 
-                <div class="mobileMenuHome">
-                    <h4 class="mobileMenuTitle bold white">Menu</h4>
-                    <div class="mobileMenuSpace">
-                        <li><a href="#overview" class="whiteOpacity">Sobre</a></li>
-                        <li><a href="#strengths" class="whiteOpacity">Diferenciais</a></li>
-                        <li><a href="#services" class="whiteOpacity">Serviços</a></li>
-                        <li><a href="#project" class="whiteOpacity">Projetos</a></li>
-                        <li><a href="#form" class="whiteOpacity">Formulário</a></li>
-                    </div>
-                </div>   
+    </div>
+  </header>
 
-                <div class="mobileMenuFollow">
-                    <h4 class="mobileMenuTitle bold white">Fale Conosco</h4>
+  <!-- =====================
+       MOBILE MENU
+  ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Menu de navegação">
+    <div class="mobile-menu__header">
+      <img src="Imagens/Logo/Logo Branca - Svg.svg" alt="Gaia Soluções Ambientais" class="mobile-menu__logo">
+      <button class="mobile-menu__close" id="closeBtn" aria-label="Fechar menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
 
-                    <div class="mobileMenuSpace">
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__links">
+        <li><a href="/" class="mobile-menu__link">Início</a></li>
+        <li>
+          <span class="mobile-menu__group-label">Serviços</span>
+          <ul class="mobile-menu__sublinks">
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Cadastro%20Ambiental%20Rural." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Cadastro Ambiental Rural</a></li>
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Licenciamento%20Ambiental." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Licenciamento Ambiental</a></li>
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Fitofisionomias." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Laudo de Fitofisionomias</a></li>
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Hidrografia." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Laudo de Hidrografia</a></li>
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Plantio%20de%20Eucalipto." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Plantio de Eucalipto</a></li>
+            <li><a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Consultoria%20Ambiental." class="mobile-menu__sublink" target="_blank" rel="noopener noreferrer">Consultoria Ambiental</a></li>
+          </ul>
+        </li>
+        <li><a href="projetos/" class="mobile-menu__link">Projetos</a></li>
+        <li><a href="contato/" class="mobile-menu__link">Contato</a></li>
+      </ul>
+    </nav>
 
-                        <li>
-                            <i class="fa-brands fa-whatsapp whiteOpacity mobileMenuFollowIcon"></i>
-                            <a href="https://wa.me/5565999281805?text=Olá!%20Vim%20pelo%20site%20da%20Gaia.%0AGostaria%20de%20mais%20informações%20sobre%20os%20serviços%20ambientais.%20Poderiam%20me%20ajudar?" class="whiteOpacity" target="_blank">(65) 99928-1805</a>
-                        </li>
+    <div class="mobile-menu__footer">
+      <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+         class="btn btn--primary mobile-menu__cta"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
 
-                        <li>
-                            <i class="fa-brands fa-instagram whiteOpacity mobileMenuFollowIcon"></i>
-                            <a href="https://www.instagram.com/ambientalgaia/" class="whiteOpacity" target="_blank">@ambientalgaia</a>
-                        </li>
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
 
-                        <li>
-                            <i class="fa-brands fa-square-facebook whiteOpacity mobileMenuFollowIcon"></i>
-                            <a href="https://www.facebook.com/solucoesambientais.gaia?locale=pt_BR" class="whiteOpacity" target="_blank">solucoesambientais.gaia</a>
-                        </li>
+  <main>
 
-                        <li>
-                            <i class="fa-solid fa-envelope whiteOpacity mobileMenuFollowIcon"></i>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=consultoria@ambientalgaia.com&su=Contato%20via%20site%20Gaia&body=Olá!%20Vim%20pelo%20site%20da%20Gaia%20e%20gostaria%20de%20mais%20informações." class="whiteOpacity" target="_blank">contato@gaia.com.br</a>
-                        </li>
+    <!-- =====================
+         01. HERO
+    ===================== -->
+    <section class="hero" id="home" aria-label="Apresentação">
+      <div class="hero__bg">
+        <img src="Imagens/Floresta/arvores.jpg" alt="" class="hero__img" aria-hidden="true" fetchpriority="high">
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero__content container">
+        <p class="overline overline--light hero__eyebrow">Consultoria Ambiental · Mato Grosso</p>
+        <h1 class="hero__title">Regularização ambiental para quem produz <span class="hero__accent">de verdade.</span></h1>
+        <p class="hero__subtitle">CAR, licenciamentos, laudos e consultoria especializada para propriedades rurais e empresas.</p>
+        <div class="hero__actions">
+          <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+             class="btn btn--white hero__cta"
+             target="_blank"
+             rel="noopener noreferrer">
+            Fale conosco
+          </a>
+          <a href="#servicos" class="hero__scroll-link">
+            Ver serviços
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="hero__trust">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          Resposta no mesmo dia
+        </p>
+      </div>
+    </section>
 
-                    </div>
-                </div>   
+    <!-- =====================
+         02. NÚMEROS
+    ===================== -->
+    <section class="numbers" aria-label="Resultados em números">
+      <div class="container">
+        <div class="numbers__grid">
+          <div class="numbers__item" data-aos="fade-up" data-aos-delay="0">
+            <strong class="numbers__value">200<span>+</span></strong>
+            <p class="numbers__label">Propriedades atendidas</p>
+          </div>
+          <div class="numbers__item" data-aos="fade-up" data-aos-delay="100">
+            <strong class="numbers__value">50k<span>+</span></strong>
+            <p class="numbers__label">Hectares regularizados</p>
+          </div>
+          <div class="numbers__item" data-aos="fade-up" data-aos-delay="200">
+            <strong class="numbers__value">40<span>+</span></strong>
+            <p class="numbers__label">Municípios atendidos</p>
+          </div>
+          <div class="numbers__item" data-aos="fade-up" data-aos-delay="300">
+            <strong class="numbers__value">5<span>+</span></strong>
+            <p class="numbers__label">Anos de experiência</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="mobileMenuHour">
-                    <h4 class=" bold white mobileMenuTitle">Horário de Atendimento</h4>
-                    <h5 class="footerHourText footerTitle whiteOpacity medium">Segunda a Sexta <br> 08:00 - 18:00</h5>
-                </div>
+    <!-- =====================
+         03. SERVIÇOS
+    ===================== -->
+    <section class="services" id="servicos">
+      <div class="container">
 
+        <div class="section-header" data-aos="fade-up">
+          <p class="overline">O que fazemos</p>
+          <h2>Nossos Serviços</h2>
+          <p class="section-header__sub">Soluções técnicas completas para regularização e gestão ambiental da sua propriedade.</p>
+        </div>
+
+        <div class="services__track" id="servicesTrack">
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/cadastroAmbiental.jpg" alt="Cadastro Ambiental Rural" class="service-card__img" loading="lazy">
             </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Cadastro Ambiental Rural</h3>
+              <p class="service-card__desc">Regularize sua propriedade no CAR com agilidade, precisão cartográfica e segurança jurídica.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Cadastro%20Ambiental%20Rural." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/laudoFitofisionomias.jpg" alt="Laudo de Fitofisionomias" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Laudo de Fitofisionomias</h3>
+              <p class="service-card__desc">Identificação e caracterização técnica das formações vegetais presentes na propriedade.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Fitofisionomias." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/laudoHidrografia.jpg" alt="Laudo de Hidrografia" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Laudo de Hidrografia</h3>
+              <p class="service-card__desc">Mapeamento e análise técnica dos recursos hídricos e áreas de preservação permanente.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Laudo%20de%20Hidrografia." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/projetoReflorestamento2.png" alt="Plantio de Eucalipto" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Plantio de Eucalipto</h3>
+              <p class="service-card__desc">Projetos de reflorestamento produtivo com espécies adequadas ao solo e clima da sua região.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Plantio%20de%20Eucalipto." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/licenciamentoAmbiental.png" alt="Licenciamento Ambiental" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Licenciamento Ambiental</h3>
+              <p class="service-card__desc">Obtenha suas licenças ambientais com segurança técnica e conformidade com a legislação vigente.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Licenciamento%20Ambiental." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__img-wrap">
+              <img src="Imagens/Gemini/consultoriaGestaoAmbiental2.png" alt="Consultoria Ambiental" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Consultoria Ambiental</h3>
+              <p class="service-card__desc">Orientação técnica especializada para decisões ambientais estratégicas e conformidade legal.</p>
+              <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Consultoria%20Ambiental." class="service-card__link" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
 
         </div>
 
-        <div class="overlay" id="overlay"></div>
+        <div class="services__nav">
+          <div class="services__dots" id="servicesDots" role="group" aria-label="Navegação dos serviços">
+            <button class="services__dot services__dot--active" aria-label="Ir para serviço 1"></button>
+            <button class="services__dot" aria-label="Ir para serviço 2"></button>
+            <button class="services__dot" aria-label="Ir para serviço 3"></button>
+            <button class="services__dot" aria-label="Ir para serviço 4"></button>
+            <button class="services__dot" aria-label="Ir para serviço 5"></button>
+            <button class="services__dot" aria-label="Ir para serviço 6"></button>
+          </div>
+          <div class="services__arrows">
+            <button class="services__arrow services__arrow--prev" aria-label="Serviço anterior" disabled>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="services__arrow services__arrow--next" aria-label="Próximo serviço">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
 
-        <article class="introduction container flex" id="introduction" data-aos="fade-right" data-aos-delay="200">
-            <h1 class="introductionTitle white semiBold">Soluções ambientais e florestais com foco em produção sustentável</h1>
-            <a class="introductionButton btn darkGreen whatsappBtn" href="#"
-            data-message="Olá! Vim pelo site da Gaia e  
-            gostaria de conhecer melhor os serviços ambientais que vocês oferecem e como podem me ajudar. Obrigado!"
-            >Saiba Mais
-            </a>
-        </article>
+      </div>
+    </section>
+
+    <!-- =====================
+         04. SOBRE
+    ===================== -->
+    <section class="about" id="sobre">
+      <div class="about__leaves" aria-hidden="true">
+        <i class="fa-solid fa-leaf about__leaf about__leaf--1"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--2"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--3"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--4"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--5"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--6"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--7"></i>
+        <i class="fa-solid fa-leaf about__leaf about__leaf--8"></i>
+      </div>
+
+      <div class="container about__container">
+        <div class="about__content" data-aos="fade-right">
+          <p class="overline">Quem somos</p>
+          <h2>Sobre a Gaia</h2>
+          <p>A Gaia Soluções Ambientais nasceu da convicção de que produção rural e responsabilidade ambiental não são opostos — são aliados. Atuamos no Mato Grosso oferecendo consultoria técnica especializada para produtores rurais e empresas que precisam regularizar, gerir e preservar seus ativos ambientais.</p>
+          <p>Nossa equipe une experiência de campo com rigor técnico e profundo conhecimento da legislação ambiental brasileira. Cada propriedade atendida recebe uma solução sob medida — não um processo padronizado.</p>
+
+          <div class="about__pillars">
+            <div class="about__pillar">
+              <i class="fa-solid fa-compass"></i>
+              <span>Experiência de Campo</span>
+            </div>
+            <div class="about__pillar">
+              <i class="fa-solid fa-scale-balanced"></i>
+              <span>Rigor Técnico</span>
+            </div>
+            <div class="about__pillar">
+              <i class="fa-solid fa-seedling"></i>
+              <span>Soluções Sob Medida</span>
+            </div>
+          </div>
+
+          <blockquote class="about__tagline">
+            Responsabilidade que Transforma.
+          </blockquote>
+        </div>
+        <div class="about__visual" data-aos="fade-left" data-aos-delay="150">
+          <div class="about__img-frame">
+            <div class="about__img-ring"></div>
+            <img src="Imagens/Floresta/arvores.jpg" alt="Floresta nativa — natureza que a Gaia preserva e regulariza" class="about__img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         05. COMO TRABALHAMOS
+    ===================== -->
+    <section class="process" id="processo">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <p class="overline">Nossa metodologia</p>
+          <h2>Como Trabalhamos</h2>
+          <p class="section-header__sub">Do contato inicial à entrega final, cada etapa é conduzida com transparência, rigor técnico e responsabilidade.</p>
+        </div>
+
+        <div class="process__steps">
+
+          <div class="process__card" data-aos="fade-up" data-aos-delay="0">
+            <div class="process__badge" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="process__card-body">
+              <span class="process__num">01</span>
+              <h3 class="process__title">Análise Inicial</h3>
+              <p class="process__desc">Entendemos a situação atual da propriedade e identificamos as necessidades de regularização e gestão ambiental.</p>
+            </div>
+          </div>
+
+          <div class="process__card" data-aos="fade-up" data-aos-delay="80">
+            <div class="process__badge" aria-hidden="true">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div class="process__card-body">
+              <span class="process__num">02</span>
+              <h3 class="process__title">Planejamento</h3>
+              <p class="process__desc">Definimos o escopo, os documentos necessários e o cronograma de execução de forma clara e transparente.</p>
+            </div>
+          </div>
+
+          <div class="process__card" data-aos="fade-up" data-aos-delay="160">
+            <div class="process__badge" aria-hidden="true">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="process__card-body">
+              <span class="process__num">03</span>
+              <h3 class="process__title">Levantamento em Campo</h3>
+              <p class="process__desc">Nossa equipe técnica realiza visitas e coleta todos os dados necessários diretamente na propriedade.</p>
+            </div>
+          </div>
+
+          <div class="process__card" data-aos="fade-up" data-aos-delay="240">
+            <div class="process__badge" aria-hidden="true">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="process__card-body">
+              <span class="process__num">04</span>
+              <h3 class="process__title">Execução Técnica</h3>
+              <p class="process__desc">Elaboramos os documentos, laudos e projetos com rigor técnico e dentro dos prazos acordados.</p>
+            </div>
+          </div>
+
+          <div class="process__card" data-aos="fade-up" data-aos-delay="320">
+            <div class="process__badge" aria-hidden="true">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="process__card-body">
+              <span class="process__num">05</span>
+              <h3 class="process__title">Suporte Contínuo</h3>
+              <p class="process__desc">Acompanhamos todo o processo junto aos órgãos competentes e seguimos disponíveis após a entrega.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         06. PROJETOS
+    ===================== -->
+    <section class="projetos" id="projetos">
+      <div class="container">
+
+        <div class="projetos__head" data-aos="fade-up">
+          <span class="projetos__eyebrow">Projetos executados</span>
+          <h2 class="projetos__title">Nossos Projetos</h2>
+          <p class="projetos__lead">Cada propriedade tem sua história. Conheça projetos que a Gaia conduziu do diagnóstico à regularização completa em todo o Mato Grosso.</p>
+        </div>
+
+        <div class="projetos__grid">
+
+          <a href="projetos/" class="proj-card proj-card--featured" data-aos="fade-up">
+            <img class="proj-card__img"
+                 src="Imagens/Imagens Fornecidas/Levantamento Circunstaciado - Reflorestamento de Eucalipto.jpg"
+                 alt="Projeto de Reflorestamento de Eucalipto"
+                 loading="lazy">
+            <div class="proj-card__overlay" aria-hidden="true"></div>
+            <span class="proj-card__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <div class="proj-card__body">
+              <span class="proj-card__badge"><i class="fa-solid fa-seedling" aria-hidden="true"></i>Reflorestamento</span>
+              <h3 class="proj-card__name">Reflorestamento de Eucalipto</h3>
+              <span class="proj-card__loc"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mato Grosso</span>
+            </div>
+          </a>
+
+          <a href="projetos/" class="proj-card" data-aos="fade-up" data-aos-delay="100">
+            <img class="proj-card__img"
+                 src="Imagens/Imagens Fornecidas/Recuperação de Áreas Degradadas.jpeg"
+                 alt="Recuperação de Áreas Degradadas"
+                 loading="lazy">
+            <div class="proj-card__overlay" aria-hidden="true"></div>
+            <span class="proj-card__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <div class="proj-card__body">
+              <span class="proj-card__badge"><i class="fa-solid fa-leaf" aria-hidden="true"></i>PRAD</span>
+              <h3 class="proj-card__name">Recuperação de Áreas Degradadas</h3>
+              <span class="proj-card__loc"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mato Grosso</span>
+            </div>
+          </a>
+
+          <a href="projetos/" class="proj-card" data-aos="fade-up" data-aos-delay="200">
+            <img class="proj-card__img"
+                 src="Imagens/Imagens Fornecidas/Laudo de hidrografias.JPG"
+                 alt="Laudo de Hidrografia"
+                 loading="lazy">
+            <div class="proj-card__overlay" aria-hidden="true"></div>
+            <span class="proj-card__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <div class="proj-card__body">
+              <span class="proj-card__badge"><i class="fa-solid fa-water" aria-hidden="true"></i>Hidrografia</span>
+              <h3 class="proj-card__name">Laudo de Hidrografia</h3>
+              <span class="proj-card__loc"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mato Grosso</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="projetos__cta" data-aos="fade-up">
+          <a href="projetos/" class="projetos__btn">Ver todos os projetos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================
+         07. DEPOIMENTOS
+    ===================== -->
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <p class="overline">Clientes</p>
+          <h2>O que dizem sobre a Gaia</h2>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-card__stars" aria-label="Avaliação 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "A Gaia resolveu em dois meses o que eu tentava regularizar há mais de um ano. CAR aprovado sem nenhuma pendência. Profissionalismo do início ao fim."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">CH</div>
+              <cite class="testimonial-card__cite">
+                <strong>Carlos Henrique</strong>
+                <span>Produtor Rural · Fazenda São João, 450 ha · Cuiabá, MT</span>
+              </cite>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card__stars" aria-label="Avaliação 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Conhecimento técnico acima da média. O laudo de fitofisionomias foi entregue no prazo e com qualidade que facilitou todo o processo junto ao órgão ambiental."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">ML</div>
+              <cite class="testimonial-card__cite">
+                <strong>Mariana Lopes</strong>
+                <span>Engenheira Florestal · Alta Floresta, MT</span>
+              </cite>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card__stars" aria-label="Avaliação 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Conseguimos o licenciamento da nossa unidade agroindustrial sem surpresas. A equipe da Gaia acompanhou cada etapa e resolveu todos os pontos junto ao órgão."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">JP</div>
+              <cite class="testimonial-card__cite">
+                <strong>João Pedro</strong>
+                <span>Empresário · Agronegócio · Tangará da Serra, MT</span>
+              </cite>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         08. CTA FINAL
+    ===================== -->
+    <section class="cta-final" aria-label="Entre em contato">
+      <div class="cta-final__bg" aria-hidden="true"></div>
+      <div class="container cta-final__content" data-aos="fade-up">
+        <p class="overline overline--light">Pronto para regularizar?</p>
+        <h2 class="cta-final__title">Fale com quem entende<br>do que você precisa.</h2>
+        <p class="cta-final__sub">Atendemos propriedades rurais e empresas em todo o Mato Grosso. A primeira conversa é gratuita.</p>
+        <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+           class="btn btn--white btn--lg"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Solicitar orçamento gratuito
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================
+       FOOTER
+  ===================== -->
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <img src="Imagens/Logo/Logo Branca - Svg.svg" alt="Gaia Soluções Ambientais" class="footer__logo">
+        <p class="footer__brand-desc">Consultoria ambiental para quem produz de verdade.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <div class="footer__col">
+          <h4 class="footer__col-title">Serviços</h4>
+          <ul class="footer__links">
+            <li><a href="servicos/car/" class="footer__link">Cadastro Ambiental Rural</a></li>
+            <li><a href="servicos/licenciamento/" class="footer__link">Licenciamento Ambiental</a></li>
+            <li><a href="servicos/laudo-fitofisionomias/" class="footer__link">Laudo de Fitofisionomias</a></li>
+            <li><a href="servicos/laudo-hidrografia/" class="footer__link">Laudo de Hidrografia</a></li>
+            <li><a href="servicos/plantio-eucalipto/" class="footer__link">Plantio de Eucalipto</a></li>
+            <li><a href="servicos/consultoria/" class="footer__link">Consultoria Ambiental</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Links</h4>
+          <ul class="footer__links">
+            <li><a href="projetos/" class="footer__link">Projetos</a></li>
+            <li><a href="contato/" class="footer__link">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contato</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="https://wa.me/5565999281805" class="footer__link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> (65) 99928-1805
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/gaiasolucoesambientais" class="footer__link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i> @gaiasolucoesambientais
+              </a>
+            </li>
+            <li>
+              <span class="footer__link">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> Seg–Sex, 08h–18h
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
     </div>
 
-    <main class="main">
-
-        <section class="overview container flex" id="overview">
-
-            <div class="overviewText flex" data-aos="fade-right" data-aos-delay="200">
-                <h2 class="overviewTitle darkGreen medium">Sobre Nós</h2>
-                <h3 class="overviewSub regular">Oferecemos soluções ambientais para empresas e propriedades que precisam de <span class="overviewSubSpan">regularização, gestão e suporte técnico</span>. Do licenciamento à consultoria contínua, entregamos <span class="overviewSubSpan">projetos seguros, eficientes e responsáveis</span>.</h3>
-                <h3 class="overviewSub regular">Se sua empresa precisa se manter em conformidade, reduzir impactos ou desenvolver  <span class="overviewSubSpan">ações sustentáveis</span> — nós cuidamos de tudo.</h3>
-                <h3 class="overviewVision extraBold">Responsabilidade que Transforma.</h3>
-            </div>
-
-            <img src="Imagens/Logo/logoGaiaVetorDegrade.svg" alt="Pessoas adando perto de uma árvore" class="overviewImg" data-aos="fade-left" data-aos-delay="380">
-
-        </section>
-
-        <section class="strengths container txtAlign flex" id="strengths">
-
-            <div class="strengthsText flex" data-aos="fade-right" data-aos-delay="200">
-                <h2 class="strengthsTextTitle darkGreen medium">Nossos Diferenciais</h2>
-                <h3 class="strengthsTextSub gray regular maxWidthSub">Comprometimento com a excelência em cada etapa do seu projeto ambiental</h3>
-            </div>
-
-            <ul class="strengthsContainerCards grid" data-aos="fade-left" data-aos-delay="380">
-
-                <li class="strengthsCards cardStyle flex">
-                    <i class="fa-solid fa-clipboard strengthsCardsIcon flex" aria-hidden="true"></i>
-                    <h4 class="strengthsCardsTitle darkGreen semiBold">Atuação</h4>
-                    <h5 class="strengthsCardsSub gray medium">Projetos completos em gestão ambiental.</h5>
-                </li>
-
-                <li class="strengthsCards cardStyle flex">
-                    <i class="fa-solid fa-user strengthsCardsIcon flex" aria-hidden="true"></i>
-                    <h4 class="strengthsCardsTitle darkGreen semiBold">Especialistas</h4>
-                    <h5 class="strengthsCardsSub gray medium">Domínio da legislação e biomas do estado.</h5>
-                </li>
-
-                <li class="strengthsCards cardStyle flex">
-                    <i class="fa-solid fa-clock strengthsCardsIcon flex" aria-hidden="true"></i>
-                    <h4 class="strengthsCardsTitle darkGreen semiBold">Agilidade</h4>
-                    <h5 class="strengthsCardsSub gray medium">Processos rápidos, seguros e transparentes.</h5>
-                </li>
-
-                <li class="strengthsCards cardStyle flex">
-                    <i class="fa-solid fa-tree strengthsCardsIcon flex" aria-hidden="true"></i>
-                    <h4 class="strengthsCardsTitle darkGreen semiBold">Expertise em Licenciamento Ambiental</h4>
-                    <h5 class="strengthsCardsSub gray medium">Regularização Ambiental, Florestal e Fundiária.</h5>
-                </li>
-
-            </ul>
-
-        </section>
-
-        <section class="cta gradientImg white">
-
-            <div class="ctaContainer flex">
-
-                <h2 class="ctaTitle medium">Vamos <span class="ctaSpan">transformar</span> seu <br> <span class="ctaSpan">empreendimento</span>?</h2>
-                <h3 class="ctaSub regular maxWidthSub">Entre em contato conosco e solicite um orçamento personalizado. Nossa equipe está pronta para atendê-lo</h3>
-
-                <div class="ctaContainerBtn flex">
-
-                    <a class="ctaBtnQuote btn flex whatsappBtn" href="#"
-                    data-message="Olá! Vim pelo site da Gaia e  
-                    gostaria de solicitar um orçamento para regularização ambiental da minha propriedade/empresa.  
-                    Posso passar algumas informações para vocês?">
-                        <i class="fa-regular fa-comment ctaBtnQuoteIcon" aria-hidden="true"></i>
-                        <h4 class="ctaBtnQuoteText">Pedir Orçamento</h4>
-                    </a>
-                    <a class="ctaBtnMessage lineBtn flex" href="https://mail.google.com/mail/?view=cm&fs=1&to=consultoria@ambientalgaia.com&su=Contato%20via%20site%20Gaia&body=Olá!%20Vim%20pelo%20site%20da%20Gaia%20e%20gostaria%20de%20mais%20informações." target="_blank">
-                        <i class="fa-regular fa-envelope ctaBtnMessageIcon" aria-hidden="true"></i>
-                        <h4 class="ctaBtnMessageText">Enviar Mensagem</h4>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="services container flex" id="services">
-
-            <div class="servicesText flex" data-aos="fade-left" data-aos-delay="200">
-                <h2 class="servicesTextTitle darkGreen medium">Nossos Serviços</h2>
-                <h3 class="servicesTextSub gray regular maxWidthSub">Soluções completas para aumentar a produtividade e sustentabilidade da sua propriedade rural.</h3>
-            </div>
-
-            <div class="servicesContainerCards grid" data-aos="fade-right" data-aos-delay="380">
-
-                <div class="servicesCard cardStyle" data-service="Cadastro Ambiental"
-                    data-message="Olá! Vim pelo site da Gaia e tenho interesse no serviço de Cadastro Ambiental Rural (CAR) para regularizar meu imóvel rural. Gostaria de saber como funciona o processo e valores.">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/cadastroAmbiental.jpg" alt="Serviço de Cadastro Ambiental Rural" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Cadastro Ambiental Rural</h4>
-                        <h5 class="servicesCardTextSub gray regular">Regularização ambiental do imóvel rural, com adequação às exigências legais.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4 class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="servicesCard cardStyle" data-service="Laudo de Fitofisionomias"
-                    data-message="Olá! Vim pelo site da Gaia e gostaria de contratar um Laudo de Fitofisionomias para identificar corretamente as áreas exploráveis e de preservação da minha propriedade. Pode me orientar sobre prazos e custos?">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/laudoFitofisionomias.jpg" alt="Serviço de Laudo de Fitofisionomias" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Laudo de Fitofisionomias</h4>
-                        <h5 class="servicesCardTextSub gray regular">Identificação precisa da vegetação da propriedade para definir áreas exploráveis e de preservação.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4 class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="servicesCard cardStyle" data-service="Laudo de Hidrografia"
-                    data-message="Olá! Vim pelo site da Gaia e tenho interesse em um Laudo de Hidrografia para mapeamento de cursos d’água na minha propriedade. Gostaria de mais informações sobre o serviço e orçamento.">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/laudoHidrografia.jpg" alt="Serviços de Laudo de Hidrografia" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Laudo de Hidrografia</h4>
-                        <h5 class="servicesCardTextSub gray regular">Mapeamento e verificação de cursos d’água para definir corretamente as áreas de preservação.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4 class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="servicesCard cardStyle" data-service="Plantio de Eucalipto"
-                    data-message="Olá! Vim pelo site da Gaia e gostaria de mais informações sobre o serviço de Projeto de Reflorestamento com eucalipto, incluindo planejamento, espécies utilizadas e etapas de execução. Também gostaria de informações sobre valores e orçamento.
-                    ">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/projetoReflorestamento.jpeg" alt="Plantio de Eucalipto" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Plantio de Eucalipto</h4>
-                        <h5 class="servicesCardTextSub gray regular">Levantamento circunstanciado e corte final de plantios de eucalipto.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4  class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="servicesCard cardStyle servicesCardHide" data-service="Licenciamento Ambiental"
-                    data-message="Olá! Vim pelo site da Gaia e tenho interesse no serviço de Licenciamento Ambiental para regularização das atividades da minha propriedade/empresa. Gostaria de saber etapas, prazos e custos.">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/licenciamentoAmbiental.png" alt="Serviços de Licenciameto Ambiental" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Licenciamento Ambiental</h4>
-                        <h5 class="servicesCardTextSub gray regular">Acompanhamento e regularização de atividades junto aos órgãos ambientais competentes.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4  class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="servicesCard cardStyle servicesCardHide" data-service="Consultoria e Gestão Ambiental"
-                    data-message="Olá! Vim pelo site da Gaia e gostaria de saber mais sobre o serviço de Consultoria e Gestão Ambiental para adequação ambiental e conformidade legal contínua. Poderiam me explicar como funciona?">
-
-                    <div class="servicesCardPicture">
-                        <img src="Imagens/Gemini/consultoriaGestaoAmbiental2.png" alt="Serviços de Consultoria e Gestão Ambiental" class="servicesCardPictureImg">
-                    </div>
-
-                    <div class="servicesCardText flex">
-                        <h4 class="servicesCardTextTitle darkGreen medium">Consultoria Ambiental</h4>
-                        <h5 class="servicesCardTextSub gray regular">Suporte técnico contínuo para adequação ambiental e conformidade legal.</h5>
-                        <a class="servicesCardBtn flex" href="#">
-                            <h4  class="servicesCardBtnText medium">Contatar</h4>
-                            <i class="fa-solid fa-arrow-right servicesCardBtnIcon" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="work container flex">
-
-            <div class="workText flex" data-aos="fade-right" data-aos-delay="200">
-                <h2 class="workTextTitle darkGreen medium">Como Trabalhamos</h2>
-                <h3 class="workTextSub gray regular maxWidthSub">Processo estruturado para garantir os melhores resultados.</h3>
-            </div>
-
-            <div class="workContainerCards grid" data-aos="fade-left" data-aos-delay="380">
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-file workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">01</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Análise Inicial</h4>
-                        <h5 class="workCardTextSub gray regular">Entendemos as necessidades do cliente e avaliamos o cenário ambiental do imóvel.</h5>
-                    </div>
-                </div>
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-clipboard workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">02</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Planejamento Estratégico</h4>
-                        <h5 class="workCardTextSub gray regular">Definimos a melhor abordagem para regularização, licenciamento e adequação ambiental.</h5>
-                    </div>
-                </div>
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-folder workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">03</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Levantamento em Campo</h4>
-                        <h5 class="workCardTextSub gray regular">Coletamos dados técnicos essenciais para garantir precisão nos estudos e laudos.</h5>
-                    </div>
-                </div>
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-chart-line workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">04</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Execução Técnica</h4>
-                        <h5 class="workCardTextSub gray regular">Elaboramos estudos, laudos e projetos com rigor científico e responsabilidade.</h5>
-                    </div>
-                </div>
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-user-gear workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">05</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Acompanhamento do Processo</h4>
-                        <h5 class="workCardTextSub gray regular">Monitoramos todas as etapas junto aos órgãos competentes até a aprovação final.</h5>
-                    </div>
-                </div>
-
-                <div class="workCard cardStyle">
-                    <div class="workCardNum flex">
-                        <i class="fa-solid fa-wrench workCardNumIcon flex" aria-hidden="true"></i>
-                        <p class="workCardNumText lightGreen bold">06</p>
-                    </div>
-
-                    <div class="workCardText">
-                        <h4 class="workCardTextTitle darkGreen medium">Suporte Contínuo</h4>
-                        <h5 class="workCardTextSub gray regular">Oferecemos orientação técnica sempre que novas demandas ambientais surgirem.</h5>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="project container flex" id="project">
-
-            <div class="projectText flex" data-aos="fade-left" data-aos-delay="200">
-                <h2 class="projectTextTitle darkGreen medium">Nossos Projetos</h2>
-                <h3 class="projectTextSub gray regular maxWidthSub">Conheça alguns dos trabalhos realizados pela Gaia.</h3>
-            </div>
-
-            <div class="projectContainerCards grid" data-aos="fade-right" data-aos-delay="380">
-                <div class="projectCards">
-                    <img src="Imagens/Imagens Fornecidas/Autorização de Corte de Árvores Isoladas.JPG" alt="Projeto de Floresta" class="projectCardPictureImg cardStyle">
-                    <h4 class="projectCardText">Plano de Exploração Florestal -PEF</h4>
-                </div>
-                <div class="projectCards">
-                    <img src="Imagens/Imagens Fornecidas/Declaração de Limpeza de Pastagens.JPG" alt="Projeto de Propriedade Rural" class="projectCardPictureImg cardStyle">
-                    <h4 class="projectCardText">Projeto de Reforma de Pastagens - DLA</h4>
-                </div>
-                <div class="projectCards">
-                    <img src="Imagens/Imagens Fornecidas/Recuperação de Áreas Degradadas.jpeg" alt="Projeto de Plantio Comercial" class="projectCardPictureImg cardStyle">
-                    <h4 class="projectCardText">Recuperação de Áreas Degradadas - PRAD</h4>
-                </div>
-                <div class="projectCards">
-                    <img src="Imagens/Imagens Fornecidas/Levantamento Circunstaciado - Reflorestamento de Eucalipto.jpg" alt="Projeto de Agricultura" class="projectCardPictureImg cardStyle">
-                    <h4 class="projectCardText">Projetos de Reflorestamento - LC/PCF</h4>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="cta2 gradientImg white">
-
-            <div class="container flex">
-                <h2 class="cta2Text medium">Quer fazer parte dessa <span class="ctaSpan">transformação</span>?</h2>
-                <a class="cta2Btn btn whatsappBtn" href="#"  data-message="Olá! Encontrei a Gaia pelo site e gostaria de conversar sobre soluções ambientais e florestais para minha propriedade ou empreendimento. Poderiam me orientar e informar como podemos começar?">Fale com Gaia</a>
-            </div>
-
-        </section>
-
-        <section class="contact container flex">
-
-            <div class="contactText flex" data-aos="fade-right" data-aos-delay="200">
-                <h2 class="contactTextTitle darkGreen medium">O que dizem os nossos clientes</h2>
-                <h3 class="contactTextSub gray regular maxWidthSub">A confiança de quem já trabalhou conosco é nossa maior conquista</h3>
-            </div>
-
-            <div class="contactContainerCards grid" data-aos="fade-left" data-aos-delay="380">
-
-                <div class="contactCard cardStyle flex">
-                    <div class="contactCardStars" aria-label="Avaliação 5 estrelas">
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                    </div>
-                    <h4 class="contactCardText gray regular">"A Gaia transformou nossa propriedade. O trabalho de recuperação ambiental foi impecável e superou nossas expectativas."</h4>
-                    <span class="contactCardLine"></span>
-                    <div class="contactCardClient flex">
-                        <div class="contactCardClientText">
-                            <h4 class="contactCardClientTextName darkGreen regular">Carlos Henrique</h4>
-                            <h5 class="contactCardClientTextWork gray regular">Produtor Rural</h5>
-                            <h5 class="contactCardClientTextLoc lightGreen regular">Cuiabá, MT</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contactCard cardStyle flex">
-                    <div class="contactCardStars" aria-label="Avaliação 5 estrelas">
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                    </div>
-                    <h4 class="contactCardText gray regular">"Parceria fundamental para nosso projeto. A expertise da Gaia em soluções ambientais fez toda a diferença no resultado final. Recomendo sem hesitar!"</h4>
-                    <span class="contactCardLine"></span>
-                    <div class="contactCardClient flex">
-                        <div class="contactCardClientText">
-                            <h4 class="contactCardClientTextName darkGreen regular">Mariana Lopes</h4>
-                            <h5 class="contactCardClientTextWork gray regular">Engenheira Florestal</h5>
-                            <h5 class="contactCardClientTextLoc lightGreen regular">Alta Floresta, MT</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contactCard cardStyle flex">
-                    <div class="contactCardStars" aria-label="Avaliação 5 estrelas">
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                    </div>
-                    <h4 class="contactCardText gray regular">"Atendimento excepcional e resultados comprovados. A Gaia nos ajudou a conquistar todas as licenças necessárias de forma ágil e eficiente."</h4>
-                    <span class="contactCardLine"></span>
-                    <div class="contactCardClient flex">
-                        <div class="contactCardClientText">
-                            <h4 class="contactCardClientTextName darkGreen regular">João Pedro</h4>
-                            <h5 class="contactCardClientTextWork gray regular">Empresário do Agronegócio</h5>
-                            <h5 class="contactCardClientTextLoc lightGreen regular">Tangará da Serra, MT</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contactCard cardStyle flex">
-                    <div class="contactCardStars" aria-label="Avaliação 5 estrelas">
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                        <i class="fa-solid fa-star contactStar lightGreen"></i>
-                    </div>
-                    <h4 class="contactCardText gray regular">"Profissionalismo e qualidade técnica excepcionais. A Gaia entrega soluções personalizadas que realmente atendem às necessidades de cada projeto."</h4>
-                    <span class="contactCardLine"></span>
-                    <div class="contactCardClient flex">
-                        <div class="contactCardClientText">
-                            <h4 class="contactCardClientTextName darkGreen regular">Renata Souza</h4>
-                            <h5 class="contactCardClientTextWork gray regular">Gestora Ambiental</h5>
-                            <h5 class="contactCardClientTextLoc lightGreen regular">Cuiabá, MT</h5>
-                        </div>
-                    </div>
-                </div>
-
-            </div>  
-
-        </section>
-
-        <span class="divisionLine"></span>
-
-        <section class="form container flex" id="form">
-
-            <div class="formText flex">
-                <h2 class="formTextTitle darkGreen medium">Entre em Contato</h2>
-                <h3 class="formTextSub gray regular maxWidthSub">Preencha o formulário ou entre em contato diretamente pelo WhatsApp.</h3>
-            </div>
-
-            <form action="https://api.web3forms.com/submit" method="POST" class="formContainer cardStyle flex" id="contactForm">
-                <input type="hidden" name="access_key" value="ee157a74-9a75-4b45-9368-089ad9ecffa6">
-
-                <div class="formContainerText flex">
-                    <label for="name" class="formContainerTextLabel darkGreen">Nome*</label>
-                    <input type="text" name="name" id="name" class="formContainerTextInput" required>
-                </div>
-
-                <div class="formContainerText flex">
-                    <label for="email" class="formContainerTextLabel darkGreen">Email*</label>
-                    <input type="email" name="email" id="email" class="formContainerTextInput" required>
-                </div>
-
-                <div class="formContainerText flex">
-                    <label for="tel" class="formContainerTextLabel darkGreen">Telefone*</label>
-                    <input type="tel" name="tel" id="tel" class="formContainerTextInput" required>
-                </div>
-
-                <div class="formContainerText flex">
-                    <label for="message" class="formContainerTextLabel darkGreen">Mensagem*</label>
-                    <textarea name="message" id="message" class="formContainerTextArea" required></textarea>
-                </div>
-
-                <div class="formContainerTextBtnContainer flex">
-                    <button class="formContainerTextBtn white bold" type="submit" aria-label="Enviar mensagem para gaia">Enviar Mensagem</button>
-                    <h5 class="formContainerTextCta gray regular">Prefere conversar pelo <a class="medium" href="#">WhatsApp</a></h5>
-                </div>
-
-            </form>
-        </section>
-
-    </main>
-
-    <footer class="footer gradientImg white flex">
-
-        <img src="Imagens/Logo/Logo Branca - Gaia 1.svg" alt="logo da empresa gaia" class="footerLogo">
-
-        <div class="footerInfoWrap">
-
-            <div class="footerLinks footerGap flex">
-                <h4 class="footerLinksTitle footerTitle bold">Links Rápidos</h4>
-                <ul class="footerLinksContainer flex">
-                    <li><a class="footerLinksContainerLink whiteOpacity medium" href="#overview">Sobre</a></li>
-                    <li><a class="footerLinksContainerLink whiteOpacity medium" href="#strengths">Diferenciais</a></li>
-                    <li><a class="footerLinksContainerLink whiteOpacity medium" href="#services">Serviços</a></li>
-                    <li><a class="footerLinksContainerLink whiteOpacity medium" href="#project">Projetos</a></li>
-                    <li><a class="footerLinksContainerLink whiteOpacity medium" href="#form">Formulário</a></li>
-                </ul>
-            </div>
-
-            <div class="footerContact footerGap flex">
-                <h4 class="footerContactTitle footerTitle bold">Contato</h4>
-                <ul class="footerContactContainer flex">
-                    <li class="footerContactContainerText flex">
-                        <i class="fa-brands fa-whatsapp whiteOpacity footerContactContainerTextIcon"></i>
-                        <a href="https://wa.me/5565999281805?text=Olá!%20Vim%20pelo%20site%20da%20Gaia.%0AGostaria%20de%20mais%20informações%20sobre%20os%20serviços%20ambientais.%20Poderiam%20me%20ajudar?" class="whiteOpacity footerContactContainerTextInfo medium" target="_blank">(65) 99928-1805</a>
-                    </li>
-                    <li class="footerContactContainerText flex">
-                        <i class="fa-brands fa-instagram footerContactContainerTextIcon whiteOpacity" aria-hidden="true"></i>
-                        <a class="footerContactContainerTextInfo whiteOpacity medium" href="https://www.instagram.com/ambientalgaia/" target="_blank">@ambientalgaia</a>
-                    </li>
-                    <li  class="footerContactContainerText flex">
-                        <i class="fa-brands fa-square-facebook whiteOpacity footerContactContainerTextIcon"></i>
-                        <a href="https://www.facebook.com/solucoesambientais.gaia?locale=pt_BR" class="whiteOpacity footerContactContainerTextInfo medium" target="_blank">solucoesambientais.gaia</a>
-                    </li>
-                    <li class="footerContactContainerText flex">
-                        <i class="fa-regular fa-envelope footerContactContainerTextIcon whiteOpacity" aria-hidden="true"></i>
-                        <a class="footerContactContainerTextInfo whiteOpacity medium" href="https://mail.google.com/mail/?view=cm&fs=1&to=consultoria@ambientalgaia.com&su=Contato%20via%20site%20Gaia&body=Olá!%20Vim%20pelo%20site%20da%20Gaia%20e%20gostaria%20de%20mais%20informações." target="_blank">consultoria@ambientalgaia.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footerHour footerGap flex">
-                <h4 class="footerHourTitle bold">Horário de Atendimento</h4>
-                <h5 class="footerHourText footerTitle whiteOpacity medium">Segunda a Sexta <br> 08:00 - 18:00</h5>
-            </div>
-
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container">
+        <p class="footer__copy">© 2025 Gaia Soluções Ambientais. Todos os direitos reservados.</p>
+        <div class="footer__social">
+          <a href="https://wa.me/5565999281805" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/gaiasolucoesambientais" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://facebook.com/gaiasolucoesambientais" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          </a>
         </div>
+      </div>
+    </div>
+  </footer>
 
-        <a class="footerBtn flex" href="#top" aria-label="Voltar ao topo">
-            <i class="fa-solid fa-arrow-up footerBtnIcon white" aria-hidden="true"></i>
-            <h4 class="footerBtnText white bold">Voltar ao Topo</h4>
-        </a>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="Js/menu.js"></script>
+  <script src="Js/carousel.js"></script>
+  <script src="Js/main.js"></script>
 
-        <span class="footerLine"></span>
-
-        <h5 class="footerCopy whiteOpacity medium">© 2024 João Victor Magalhães, Inc.All rights reserved.</h5>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
-    <script src="Js/loader.js"></script>
-    <script src="Js/menu.js"></script>
-    <script src="Js/whats.js"></script>
-    <script src="Js/form.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        AOS.init({
-        duration: 1000, 
-        easing: 'ease-in-out',
-        once: true
-     });
-    </script>
-    
 </body>
 </html>
