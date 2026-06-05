@@ -1,0 +1,5 @@
+- **AOS (Animate On Scroll)** — scroll-triggered entrance animations applied to section headings, cards, and layout blocks via `data-aos` attributes
+- **Font Awesome 6** — icon library providing glyphs for navigation chevrons, WhatsApp/Instagram/Facebook brands, service links, process badges, project badges, and footer contact items
+- **Google Fonts** — web font host delivering Montserrat (display headings) and Poppins (body copy) loaded via `@import` in `Css/fonts.css`
+- **Vanilla CSS** — custom stylesheet split across four files: `variables.css` (design tokens), `style.css` (all component styles), `responsivo.css` (responsive breakpoints), `fonts.css` (font import)
+- **Vanilla JavaScript** — three plain JS modules: `menu.js` (mobile menu toggle and overlay), `carousel.js` (services track scroll, dot indicators, prev/next arrows), `main.js` (AOS init, navbar scroll state, desktop dropdown, process card height equalizer)

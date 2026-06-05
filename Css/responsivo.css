@@ -107,6 +107,25 @@
   }
 
   /* Testimonials */
+  .testimonials__top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3xl);
+  }
+
+  .testimonials__intro {
+    flex: 1.2;
+  }
+
+  .testimonials__highlight {
+    flex: 1;
+  }
+
+  .testimonials__highlight-card {
+    padding: var(--space-xl) var(--space-2xl);
+  }
+
   .testimonials__grid {
     grid-template-columns: repeat(2, 1fr);
   }
