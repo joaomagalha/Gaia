@@ -1055,12 +1055,11 @@ button {
   100% { transform: translateY(-115vh) rotate(380deg) translateX(-2rem); opacity: 0; }
 }
 
-/* Layout — grid duas colunas */
+/* Layout — coluna única por padrão, duas colunas só no desktop */
 .about__container {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-3xl);
-  align-items: center;
   position: relative;
   z-index: 2;
 }
