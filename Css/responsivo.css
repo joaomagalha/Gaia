@@ -91,10 +91,6 @@
   }
 
   /* About — tablet: coluna única, imagem centralizada */
-  .about__visual {
-    order: -1;
-  }
-
   .about__img-frame {
     width: 34rem;
     height: 34rem;
