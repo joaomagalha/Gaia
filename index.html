@@ -297,6 +297,10 @@
          04. SOBRE
     ===================== -->
     <section class="about" id="sobre">
+      <!-- DS3: efeitos de fundo animados -->
+      <div class="about__bg-glow" aria-hidden="true"></div>
+      <div class="about__bg-grid" aria-hidden="true"></div>
+
       <div class="about__leaves" aria-hidden="true">
         <i class="fa-solid fa-leaf about__leaf about__leaf--1"></i>
         <i class="fa-solid fa-leaf about__leaf about__leaf--2"></i>
@@ -332,12 +336,22 @@
 
           <blockquote class="about__tagline">
             Responsabilidade que Transforma.
+            
           </blockquote>
         </div>
+
         <div class="about__visual" data-aos="fade-left" data-aos-delay="150">
           <div class="about__img-frame">
             <div class="about__img-ring"></div>
             <img src="Imagens/Floresta/arvores.jpg" alt="Floresta nativa — natureza que a Gaia preserva e regulariza" class="about__img" loading="lazy">
+          </div>
+          <!-- DS3: card flutuante de estatística -->
+          <div class="about__stat-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="about__stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="about__stat-info">
+              <span class="about__stat-label">Propriedades Regularizadas</span>
+              <strong class="about__stat-val">+200 Clientes</strong>
+            </div>
           </div>
         </div>
       </div>

@@ -2,6 +2,14 @@
    MOBILE ONLY — até 767px
 =================================== */
 @media (max-width: 767px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stat-card {
+    display: none;
+  }
+
   .about__img-frame {
     width: 28rem;
     height: 28rem;
@@ -84,17 +92,7 @@
 
   /* About */
   .about__container {
-    flex-direction: row;
-    align-items: center;
     gap: var(--space-4xl);
-  }
-
-  .about__content {
-    flex: 3;
-  }
-
-  .about__visual {
-    flex: 2;
   }
 
   .about__img-frame {
