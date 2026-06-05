@@ -2,6 +2,10 @@
    MOBILE ONLY — até 767px
 =================================== */
 @media (max-width: 767px) {
+  .hero__float-badge {
+    display: none;
+  }
+
   .about__container {
     grid-template-columns: 1fr;
   }

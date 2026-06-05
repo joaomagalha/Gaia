@@ -125,19 +125,23 @@
     ===================== -->
     <section class="hero" id="home" aria-label="Apresentação">
       <div class="hero__bg">
-        <img src="Imagens/Floresta/arvores.jpg" alt="" class="hero__img" aria-hidden="true" fetchpriority="high">
+        <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+          <source src="Videos/Aerial_glide_above_tropical_rain…_202606020158.mp4" type="video/mp4">
+        </video>
         <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__bg-grid" aria-hidden="true"></div>
       </div>
+
       <div class="hero__content container">
         <p class="overline overline--light hero__eyebrow">Consultoria Ambiental · Mato Grosso</p>
         <h1 class="hero__title">Regularização ambiental para quem produz <span class="hero__accent">de verdade.</span></h1>
         <p class="hero__subtitle">CAR, licenciamentos, laudos e consultoria especializada para propriedades rurais e empresas.</p>
         <div class="hero__actions">
           <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
-             class="btn btn--white hero__cta"
+             class="btn btn--white hero__cta btn--shimmer btn--arrow-anim"
              target="_blank"
              rel="noopener noreferrer">
-            Fale conosco
+            Fale conosco <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
           <a href="#servicos" class="hero__scroll-link">
             Ver serviços
@@ -148,6 +152,13 @@
           <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
           Resposta no mesmo dia
         </p>
+      </div>
+
+      <!-- DS3: badge flutuante de prova social -->
+      <div class="hero__float-badge" data-aos="fade-up" data-aos-delay="700">
+        <span class="hero__float-badge-pulse"></span>
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        +200 propriedades regularizadas
       </div>
     </section>
 
