@@ -865,7 +865,7 @@ button {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: var(--radius-pill);
-  background: var(--color-earth);
+  background: rgba(74, 82, 51, 0.2);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -874,7 +874,7 @@ button {
 
 .services__dot--active {
   width: 2.4rem;
-  background: var(--color-primary);
+  background: var(--color-sage);
 }
 
 .services__arrows {
@@ -882,18 +882,19 @@ button {
   gap: var(--space-sm);
 }
 
+/* DS3: setas com borda sage */
 .services__arrow {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  border: 1.5px solid var(--color-earth);
-  background: var(--color-white);
+  border: 1px solid rgba(138, 148, 112, 0.3);
+  background: transparent;
   color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: background var(--transition-base), border-color var(--transition-base),
               color var(--transition-base), transform var(--transition-fast),
               opacity var(--transition-base);
@@ -907,29 +908,35 @@ button {
 }
 
 .services__arrow:disabled {
-  opacity: 0.28;
+  opacity: 0.25;
   cursor: not-allowed;
 }
 
-/* Cards */
+/* DS3: cards com borda sutil e radius maior */
 .service-card {
   flex: 0 0 80%;
   scroll-snap-align: start;
   background: var(--color-white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(46, 50, 36, 0.09);
   overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 2px 8px rgba(30, 37, 24, 0.05);
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+              border-color var(--transition-base);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  border-color: rgba(138, 148, 112, 0.4);
+  box-shadow: 0 12px 30px rgba(30, 37, 24, 0.10);
 }
 
 .service-card__img-wrap {
-  height: 20rem;
+  height: 18rem;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .service-card__img {
@@ -940,48 +947,77 @@ button {
 }
 
 .service-card:hover .service-card__img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .service-card__body {
   padding: var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+/* DS3: tag de categoria — overline sage com traço */
+.service-card__category {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-overline);
+  color: var(--color-sage);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-2xs);
+}
+
+.service-card__category::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.5px;
+  background: var(--color-sage);
+  flex-shrink: 0;
 }
 
 .service-card__title {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 2vw, 2.2rem);
-  font-weight: var(--weight-regular);
-  color: var(--color-deep);
+  font-size: clamp(1.7rem, 2vw, 2rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest);
   line-height: var(--leading-display);
 }
 
 .service-card__desc {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--color-mist);
   line-height: var(--leading-body);
+  flex: 1;
 }
 
+/* DS3: link com borda separadora e ícone à direita */
 .service-card__link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: var(--weight-semibold);
-  color: var(--color-primary);
-  margin-top: var(--space-xs);
-  transition: gap var(--transition-fast), color var(--transition-fast);
+  color: var(--color-sage);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(46, 50, 36, 0.07);
+  width: 100%;
+  transition: color var(--transition-fast), gap var(--transition-fast);
 }
 
 .service-card__link:hover {
+  color: var(--color-primary);
   gap: var(--space-sm);
-  color: var(--color-deep);
 }
 
 .service-card__link i {
   font-size: 1.1rem;
+  margin-left: auto;
   transition: transform var(--transition-fast);
 }
 
