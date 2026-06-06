@@ -89,6 +89,10 @@
     scroll-snap-align: none;
   }
 
+  .service-card__img-wrap {
+    height: 26rem;
+  }
+
   .services__nav {
     display: none;
   }
