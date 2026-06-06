@@ -214,10 +214,10 @@
     box-sizing: border-box;
   }
 
-  /* número ghost maior no desktop para preencher o canto do card */
+  /* número ghost no desktop */
   .process__num {
-    font-size: 8rem;
-    top: -0.8rem;
+    font-size: 5.6rem;
+    top: var(--space-lg);
     right: var(--space-2xl);
   }
 
