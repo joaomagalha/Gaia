@@ -21,7 +21,7 @@
 
   function scrollToIndex(index) {
     index = Math.max(0, Math.min(index, maxIndex()));
-    const card     = cards[index];
+    const card      = cards[index];
     const trackRect = track.getBoundingClientRect();
     const cardRect  = card.getBoundingClientRect();
     track.scrollBy({ left: cardRect.left - trackRect.left, behavior: 'smooth' });
@@ -44,24 +44,23 @@
     dot.addEventListener('click', () => scrollToIndex(i));
   });
 
-  // Sync dot/arrows when user drags/swipes manually
-  let scrollTimer;
-  track.addEventListener('scroll', () => {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-      const trackLeft = track.getBoundingClientRect().left;
-      let closest = 0;
-      let minDist  = Infinity;
-      cards.forEach((card, i) => {
-        const dist = Math.abs(card.getBoundingClientRect().left - trackLeft);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      if (closest !== currentIndex) {
-        currentIndex = closest;
-        updateUI();
+  // IntersectionObserver: atualiza dots imediatamente ao card entrar na área visível
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = cards.indexOf(entry.target);
+        if (index !== -1 && index !== currentIndex) {
+          currentIndex = index;
+          updateUI();
+        }
       }
-    }, 80);
-  }, { passive: true });
+    });
+  }, {
+    root: track,
+    threshold: 0.5
+  });
+
+  cards.forEach(card => observer.observe(card));
 
   window.addEventListener('resize', updateUI, { passive: true });
 
