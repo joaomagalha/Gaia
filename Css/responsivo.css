@@ -62,14 +62,17 @@
     font-size: 1.6rem;
   }
 
-  /* Numbers */
+  /* Numbers — 4 colunas com separador vertical */
   .numbers__grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
   }
 
-  .numbers__item + .numbers__item {
-    border-left: 1px solid var(--color-earth);
+  .numbers__item {
+    border-right: 1px solid rgba(46, 50, 36, 0.1);
+  }
+
+  .numbers__item:last-child {
+    border-right: none;
   }
 
   /* Services — tablet e desktop: grid 3 colunas, sem carousel */
