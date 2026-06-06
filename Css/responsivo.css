@@ -97,6 +97,18 @@
     display: none;
   }
 
+  /* Process — tablet: 2 colunas lado a lado */
+  .process__steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* 5º card sozinho: ocupa coluna da esquerda, tamanho fixo */
+  .process__card:nth-child(5) {
+    grid-column: 1 / 2;
+  }
+
   /* About — tablet: coluna única, imagem centralizada */
   .about__img-frame {
     width: 34rem;
