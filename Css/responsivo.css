@@ -214,6 +214,13 @@
     box-sizing: border-box;
   }
 
+  /* número ghost maior no desktop para preencher o canto do card */
+  .process__num {
+    font-size: 8rem;
+    top: -0.8rem;
+    right: var(--space-2xl);
+  }
+
   .process__badge {
     margin-bottom: var(--space-xs);
   }
