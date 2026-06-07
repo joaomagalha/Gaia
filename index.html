@@ -516,619 +516,87 @@
       </div>
     </section>
 
-<!--
-================================================================================
-LUMINAE - SEÇÃO DE DEPOIMENTOS PREMIUM
-Este bloco é autossuficiente e pronto para ser inserido em qualquer local do projeto.
-Utiliza as mesmas variáveis de estilo, fontes e lógica de animações do design_system3.html.
-================================================================================
--->
+    <!-- =====================
+         07. DEPOIMENTOS
+    ===================== -->
+    <section class="testimonials" id="depoimentos" aria-label="Depoimentos">
+      <div class="container">
+        <div class="testimonials__top">
+          <div class="testimonials__intro" data-aos="fade-right">
+            <p class="overline">Depoimentos</p>
+            <h2>O que nossos<br><em>clientes dizem</em></h2>
+            <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+               class="btn btn--primary testimonials__cta"
+               target="_blank"
+               rel="noopener">
+              Fale com um especialista <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
 
-<!-- CSS Isolado para a Seção de Depoimentos Luminae -->
-<style>
-    /* Escopo isolado com variáveis e estilos para a seção Luminae */
-    .luminae-testimonials {
-        background-color: #12160F; /* --color-docs-dark do design_system3.html */
-        color: #FAF8F4; /* --color-stone */
-        padding: 9.6rem 0; /* --space-4xl */
-        position: relative;
-        overflow: hidden;
-        font-family: "Poppins", system-ui, -apple-system, sans-serif; /* Fallback caso a fonte global falhe */
-        z-index: 1;
-    }
-
-    /* Fundo nebular com gradientes animados e pulsação orgânica */
-    .luminae-testimonials__bg-glow {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-        overflow: hidden;
-    }
-
-    .luminae-testimonials__bg-glow::before,
-    .luminae-testimonials__bg-glow::after {
-        content: "";
-        position: absolute;
-        width: 40vmax;
-        height: 40vmax;
-        border-radius: 50%;
-        filter: blur(90px);
-        opacity: 0.12;
-        animation: luminaeMoveGlow 20s infinite alternate ease-in-out;
-    }
-
-    .luminae-testimonials__bg-glow::before {
-        background: radial-gradient(circle, var(--color-primary, #4A5233) 0%, transparent 70%);
-        top: -10%;
-        right: -10%;
-    }
-
-    .luminae-testimonials__bg-glow::after {
-        background: radial-gradient(circle, var(--color-sage, #8A9470) 0%, transparent 70%);
-        bottom: -10%;
-        left: -10%;
-        animation-duration: 25s;
-        animation-delay: -5s;
-    }
-
-    @keyframes luminaeMoveGlow {
-        0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-        50% { transform: translate(6vw, 4vh) scale(1.15) rotate(180deg); }
-        100% { transform: translate(-4vw, -6vh) scale(0.9) rotate(360deg); }
-    }
-
-    /* Container de layout */
-    .luminae-testimonials-container {
-        max-width: var(--container-max, 128rem);
-        margin: 0 auto;
-        padding: 0 var(--container-pad, 2.4rem);
-        box-sizing: border-box;
-    }
-
-    /* Grid do topo: 2 colunas no desktop, empilhado no mobile */
-    .luminae-testimonials__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 6.4rem; /* --space-3xl */
-        margin-bottom: 6.4rem;
-    }
-
-    .luminae-testimonials__intro {
-        flex: 1.2;
-        max-width: 650px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .luminae-testimonials__highlight {
-        flex: 0.8;
-        width: 100%;
-    }
-
-    /* Eyebrow de categoria */
-    .luminae-testimonials__eyebrow {
-        font-family: var(--font-display, "Montserrat", sans-serif);
-        font-size: var(--text-sm, 1.3rem);
-        font-weight: var(--weight-semibold, 600);
-        color: var(--color-sage, #8A9470);
-        text-transform: uppercase;
-        letter-spacing: var(--tracking-overline, 0.10em);
-        margin: 0 0 1.2rem 0; /* --space-sm */
-    }
-
-    /* Título principal responsivo */
-    .luminae-testimonials__title {
-        font-family: var(--font-display, "Montserrat", sans-serif);
-        font-size: var(--text-h2, clamp(2.8rem, 4vw, 4.8rem));
-        font-weight: var(--weight-semibold, 600);
-        line-height: var(--leading-display, 1.15);
-        color: var(--color-stone, #FAF8F4);
-        margin: 0 0 3.2rem 0; /* --space-xl */
-    }
-
-    /* Botão de contato premium com Shimmer sweep e seta animada */
-    .luminae-testimonials__cta {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-xs, 0.8rem);
-        padding: 1.2rem 2.8rem;
-        background-color: var(--color-primary, #4A5233);
-        color: var(--color-stone, #FAF8F4);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: var(--radius-pill, 100rem);
-        font-family: var(--font-body, "Poppins", sans-serif);
-        font-size: var(--text-btn, 1.5rem);
-        font-weight: var(--weight-medium, 500);
-        text-decoration: none;
-        transition: all var(--transition-base, 250ms ease);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .luminae-testimonials__cta::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -60%;
-        width: 30%;
-        height: 200%;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.25) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        transform: rotate(30deg);
-        animation: luminaeShimmerSweep 4s infinite ease-in-out;
-    }
-
-    @keyframes luminaeShimmerSweep {
-        0% { left: -60%; }
-        15% { left: 130%; }
-        100% { left: 130%; }
-    }
-
-    .luminae-testimonials__cta i {
-        font-size: 1.4rem;
-        transition: transform var(--transition-fast, 150ms ease);
-    }
-
-    .luminae-testimonials__cta:hover {
-        background-color: var(--color-sage, #8A9470);
-        color: #12160F;
-        border-color: var(--color-sage, #8A9470);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(138, 148, 112, 0.25);
-    }
-
-    .luminae-testimonials__cta:hover i {
-        transform: translateX(4px);
-    }
-
-    /* Card de Métricas e Prova Social */
-    .luminae-metrics-card {
-        background-color: #1C2216; /* --color-docs-card do design_system3.html */
-        border: 1px solid rgba(255, 255, 255, 0.08); /* --color-docs-border */
-        border-radius: var(--radius-lg, 1.6rem);
-        padding: 3.2rem; /* --space-xl */
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem; /* --space-lg */
-        box-shadow: var(--shadow-md, 0 4px 12px rgba(30, 37, 24, 0.1));
-    }
-
-    .luminae-metrics-card__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1.2rem;
-    }
-
-    .luminae-metrics-card__title {
-        font-family: var(--font-display, "Montserrat", sans-serif);
-        font-size: var(--text-h4, 2rem);
-        font-weight: var(--weight-semibold, 600);
-        color: var(--color-stone, #FAF8F4);
-        margin: 0;
-    }
-
-    .luminae-metrics-card__stars {
-        display: flex;
-        gap: var(--space-2xs, 0.4rem);
-        color: var(--color-sage, #8A9470);
-        font-size: 1.4rem;
-    }
-
-    .luminae-metrics-card__metrics {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.4rem;
-    }
-
-    .luminae-metrics-card__metric {
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-    }
-
-    .luminae-metrics-card__value {
-        font-family: var(--font-display, "Montserrat", sans-serif);
-        font-size: clamp(3.2rem, 4.5vw, 4.4rem);
-        font-weight: 300;
-        color: var(--color-sage, #8A9470);
-        line-height: 1;
-    }
-
-    .luminae-metrics-card__label {
-        font-family: var(--font-body, "Poppins", sans-serif);
-        font-size: var(--text-sm, 1.3rem);
-        color: #A3AB95; /* --color-docs-text-muted */
-        line-height: 1.4;
-    }
-
-    /* Grid com os três depoimentos */
-    .luminae-testimonials__grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3.2rem; /* --space-xl */
-    }
-
-    /* Cards de depoimentos */
-    .luminae-testimonial-card {
-        background-color: #1C2216; /* --color-docs-card */
-        border: 1px solid rgba(255, 255, 255, 0.08); /* --color-docs-border */
-        border-radius: var(--radius-lg, 1.6rem);
-        padding: 3.2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-        transition: all var(--transition-base, 250ms ease);
-    }
-
-    .luminae-testimonial-card:hover {
-        border-color: rgba(138, 148, 112, 0.3); /* Sage border glow */
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .luminae-testimonial-card__quote {
-        font-family: var(--font-body, "Poppins", sans-serif);
-        font-size: clamp(1.5rem, 1.6vw, 1.7rem); /* --text-body */
-        line-height: var(--leading-body, 1.65);
-        color: var(--color-stone, #FAF8F4);
-        margin: 0;
-        flex: 1;
-        font-style: italic;
-        opacity: 0.95;
-    }
-
-    .luminae-testimonial-card__divider {
-        height: 1px;
-        background: rgba(255, 255, 255, 0.08);
-        width: 100%;
-    }
-
-    .luminae-testimonial-card__footer {
-        display: flex;
-        align-items: center;
-        gap: var(--space-md, 1.6rem);
-    }
-
-    .luminae-testimonial-card__avatar {
-        width: 4.4rem;
-        height: 4.4rem;
-        border-radius: 50%;
-        background-color: var(--color-primary, #4A5233);
-        color: var(--color-stone, #FAF8F4);
-        font-family: var(--font-display, "Montserrat", sans-serif);
-        font-size: 1.6rem;
-        font-weight: var(--weight-semibold, 600);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .luminae-testimonial-card__cite {
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-    }
-
-    .luminae-testimonial-card__name {
-        font-family: var(--font-body, "Poppins", sans-serif);
-        font-size: 1.5rem;
-        font-weight: var(--weight-semibold, 600);
-        color: var(--color-stone, #FAF8F4);
-        margin: 0;
-    }
-
-    .luminae-testimonial-card__desc {
-        font-family: var(--font-body, "Poppins", sans-serif);
-        font-size: 1.3rem;
-        color: #A3AB95;
-        margin: 0;
-    }
-
-    /* ==============================================================================
-       SISTEMA DE ANIMAÇÕES INTERNAS (Usando Intersection Observer ou AOS)
-       Se a página tiver AOS, as classes de animação se adaptam perfeitamente.
-       Se não tiver, o JS incorporado adicionará a classe `.luminae-active`.
-       ============================================================================== */
-    .luminae-animate {
-        opacity: 0;
-        will-change: opacity, transform;
-    }
-
-    /* Entrada do Eyebrow (Fade In simples) */
-    .luminae-testimonials__eyebrow.luminae-animate {
-        transition: opacity 0.6s ease;
-    }
-    .luminae-testimonials__eyebrow.luminae-animate.luminae-active {
-        opacity: 1;
-    }
-
-    /* Entrada do Título e Botão (Fade Up) */
-    .luminae-testimonials__title.luminae-animate,
-    .luminae-testimonials__cta.luminae-animate {
-        transform: translateY(20px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .luminae-testimonials__cta.luminae-animate {
-        transition-delay: 0.15s;
-    }
-    .luminae-testimonials__title.luminae-animate.luminae-active,
-    .luminae-testimonials__cta.luminae-animate.luminae-active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Entrada do Card de Métricas (Desliza da direita no Desktop) */
-    .luminae-testimonials__highlight.luminae-animate {
-        transform: translateX(30px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        transition-delay: 0.25s;
-    }
-    .luminae-testimonials__highlight.luminae-animate.luminae-active {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Entrada dos Cards de Depoimento (Stagger com delays diferentes) */
-    .luminae-testimonial-card.luminae-animate {
-        transform: translateX(-30px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .luminae-testimonial-card.luminae-animate.luminae-active {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Lógica Stagger via CSS para os 3 depoimentos */
-    .luminae-testimonials__grid .luminae-testimonial-card.luminae-animate.luminae-active:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-    .luminae-testimonials__grid .luminae-testimonial-card.luminae-animate.luminae-active:nth-child(2) {
-        transition-delay: 0.25s;
-    }
-    .luminae-testimonials__grid .luminae-testimonial-card.luminae-animate.luminae-active:nth-child(3) {
-        transition-delay: 0.4s;
-    }
-
-    /* Desativa animações se o usuário preferir movimentos reduzidos */
-    @media (prefers-reduced-motion: reduce) {
-        .luminae-animate {
-            opacity: 1 !important;
-            transform: none !important;
-            transition: none !important;
-        }
-    }
-
-    /* ==============================================================================
-       RESPONSIVIDADE (MOBILE & TABLET BREAKPOINTS)
-       ============================================================================== */
-    @media (max-width: 992px) {
-        .luminae-testimonials {
-            padding: 6.4rem 0; /* --space-3xl */
-        }
-        
-        .luminae-testimonials__top {
-            flex-direction: column;
-            gap: 3.2rem;
-            margin-bottom: 4.8rem;
-        }
-        
-        .luminae-testimonials__intro {
-            max-width: 100%;
-        }
-
-        .luminae-testimonials__title {
-            margin-bottom: 2.4rem;
-        }
-
-        .luminae-testimonials__cta {
-            width: 100%;
-            justify-content: center;
-        }
-
-        /* Animação do card de métricas no mobile passa a ser fade up */
-        .luminae-testimonials__highlight.luminae-animate {
-            transform: translateY(20px);
-        }
-        
-        /* Animação dos cards de depoimento no mobile passa a ser fade up */
-        .luminae-testimonial-card.luminae-animate {
-            transform: translateY(20px);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .luminae-testimonials__grid {
-            grid-template-columns: 1fr;
-            gap: 2.4rem;
-        }
-        
-        .luminae-metrics-card {
-            padding: 2.4rem;
-        }
-
-        .luminae-metrics-card__metrics {
-            gap: 1.6rem;
-        }
-        
-        .luminae-testimonial-card {
-            padding: 2.4rem;
-        }
-    }
-</style>
-
-<!-- Estrutura HTML semântica e acessível da seção de Depoimentos Luminae -->
-<section class="luminae-testimonials" id="depoimentos">
-    <!-- Efeito de Fundo Animado -->
-    <div class="luminae-testimonials__bg-glow" aria-hidden="true"></div>
-
-    <div class="luminae-testimonials-container">
-        <!-- Parte Superior: Título + Métricas -->
-        <div class="luminae-testimonials__top">
-            
-            <!-- Introdução da seção -->
-            <div class="luminae-testimonials__intro luminae-animate" data-aos="fade-right">
-                <p class="luminae-testimonials__eyebrow luminae-animate" data-aos="fade-in">DEPOIMENTOS</p>
-                <h2 class="luminae-testimonials__title luminae-animate" data-aos="fade-up">
-                    O que nossos pacientes dizem sobre a experiência Luminae
-                </h2>
-                
-                <a href="https://wa.me/5565999281805?text=Olá! Gostaria de agendar uma consulta na clínica Luminae." 
-                   class="luminae-testimonials__cta luminae-animate" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   data-aos="fade-up" 
-                   data-aos-delay="150"
-                   aria-label="Entrar em contato via WhatsApp">
-                    Entrar em contato <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-
-            <!-- Card de Prova Social e Métricas à Direita -->
-            <div class="luminae-testimonials__highlight luminae-animate" data-aos="fade-left" data-aos-delay="200">
-                <div class="luminae-metrics-card">
-                    <div class="luminae-metrics-card__header">
-                        <h3 class="luminae-metrics-card__title">Experiência comprovada</h3>
-                        
-                        <!-- Ícones de estrelas para prova social -->
-                        <div class="luminae-metrics-card__stars" aria-label="Classificação 5 de 5 estrelas">
-                            <i class="fa-solid fa-star" aria-hidden="true"></i>
-                            <i class="fa-solid fa-star" aria-hidden="true"></i>
-                            <i class="fa-solid fa-star" aria-hidden="true"></i>
-                            <i class="fa-solid fa-star" aria-hidden="true"></i>
-                            <i class="fa-solid fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                    <!-- Métricas de Atendimento -->
-                    <div class="luminae-metrics-card__metrics">
-                        <div class="luminae-metrics-card__metric">
-                            <span class="luminae-metrics-card__value">+100</span>
-                            <span class="luminae-metrics-card__label">pacientes acompanhados</span>
-                        </div>
-                        <div class="luminae-metrics-card__metric">
-                            <span class="luminae-metrics-card__value">+25</span>
-                            <span class="luminae-metrics-card__label">protocolos personalizados</span>
-                        </div>
-                    </div>
+          <div class="testimonials__highlight" data-aos="fade-left" data-aos-delay="100">
+            <div class="testimonials__highlight-card">
+              <div class="testimonials__highlight-header">
+                <p class="testimonials__highlight-title">Regularização total em tempo recorde</p>
+                <div class="testimonials__highlight-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </div>
+              </div>
+              <p>"Nunca imaginei que seria tão simples regularizar minha propriedade. A equipe da Gaia cuidou de tudo — do CAR ao licenciamento — com muita profissionalidade e agilidade."</p>
+              <div class="testimonials__metrics">
+                <div class="testimonials__metric">
+                  <span class="testimonials__metric-num">+200</span>
+                  <span class="testimonials__metric-label">Clientes atendidos</span>
+                </div>
+                <div class="testimonials__metric">
+                  <span class="testimonials__metric-num">98%</span>
+                  <span class="testimonials__metric-label">Taxa de aprovação</span>
+                </div>
+              </div>
             </div>
-
+          </div>
         </div>
 
-        <!-- Parte Inferior: Grid de Cards de Depoimentos -->
-        <div class="luminae-testimonials__grid">
-            
-            <!-- Depoimento 1: Juliana Martins -->
-            <article class="luminae-testimonial-card luminae-animate" data-aos="fade-up" data-aos-delay="300">
-                <blockquote class="luminae-testimonial-card__quote">
-                    “Encontrei na Luminae um acompanhamento muito mais completo do que eu esperava. A consulta foi cuidadosa, estratégica e realmente olhou para minha rotina como um todo.”
-                </blockquote>
-                
-                <div class="luminae-testimonial-card__divider" aria-hidden="true"></div>
-                
-                <footer class="luminae-testimonial-card__footer">
-                    <div class="luminae-testimonial-card__avatar" aria-hidden="true">J</div>
-                    <cite class="luminae-testimonial-card__cite">
-                        <strong class="luminae-testimonial-card__name">Juliana Martins</strong>
-                        <span class="luminae-testimonial-card__desc">Paciente</span>
-                    </cite>
-                </footer>
-            </article>
+        <div class="testimonials__grid">
+          <article class="testimonial-card" data-aos="fade-up">
+            <p class="testimonial-card__quote">"A Gaia foi essencial para regularizar nossa fazenda em Mato Grosso. Eles orientaram cada etapa do processo com clareza e comprometimento."</p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">CM</div>
+              <cite class="testimonial-card__cite">
+                <strong>Carlos Mendonça</strong>
+                <span>Pecuarista — Alta Floresta, MT</span>
+              </cite>
+            </footer>
+          </article>
 
-            <!-- Depoimento 2: Mariana Lopes -->
-            <article class="luminae-testimonial-card luminae-animate" data-aos="fade-up" data-aos-delay="400">
-                <blockquote class="luminae-testimonial-card__quote">
-                    “Gostei da forma como tudo foi explicado com clareza. Os exames, a estratégia nutricional e o acompanhamento fizeram diferença na minha evolução.”
-                </blockquote>
-                
-                <div class="luminae-testimonial-card__divider" aria-hidden="true"></div>
-                
-                <footer class="luminae-testimonial-card__footer">
-                    <div class="luminae-testimonial-card__avatar" aria-hidden="true">M</div>
-                    <cite class="luminae-testimonial-card__cite">
-                        <strong class="luminae-testimonial-card__name">Mariana Lopes</strong>
-                        <span class="luminae-testimonial-card__desc">Paciente</span>
-                    </cite>
-                </footer>
-            </article>
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <p class="testimonial-card__quote">"O licenciamento ambiental da nossa agroindústria estava parado há anos. Com a Gaia, conseguimos a aprovação em menos de 6 meses."</p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">RP</div>
+              <cite class="testimonial-card__cite">
+                <strong>Renata Paiva</strong>
+                <span>Diretora — Agroindústria Paiva</span>
+              </cite>
+            </footer>
+          </article>
 
-            <!-- Depoimento 3: Mariana Costa -->
-            <article class="luminae-testimonial-card luminae-animate" data-aos="fade-up" data-aos-delay="500">
-                <blockquote class="luminae-testimonial-card__quote">
-                    “A equipe me passou muita segurança desde o primeiro contato. Senti que cada decisão foi tomada com base em ciência, cuidado e atenção aos detalhes.”
-                </blockquote>
-                
-                <div class="luminae-testimonial-card__divider" aria-hidden="true"></div>
-                
-                <footer class="luminae-testimonial-card__footer">
-                    <div class="luminae-testimonial-card__avatar" aria-hidden="true">M</div>
-                    <cite class="luminae-testimonial-card__cite">
-                        <strong class="luminae-testimonial-card__name">Mariana Costa</strong>
-                        <span class="luminae-testimonial-card__desc">Paciente</span>
-                    </cite>
-                </footer>
-            </article>
-
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <p class="testimonial-card__quote">"Além do CAR, fizeram o projeto de reflorestamento da nossa área de preservação. Trabalho impecável, com toda a documentação correta."</p>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">JS</div>
+              <cite class="testimonial-card__cite">
+                <strong>João Souza</strong>
+                <span>Produtor rural — Sinop, MT</span>
+              </cite>
+            </footer>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Script de Animações Luminae (Fallback se o AOS global não estiver rodando) -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Verifica se a biblioteca AOS está ativa e inicializada
-        const isAosActive = typeof AOS !== 'undefined';
-
-        if (!isAosActive) {
-            // Configurações do Intersection Observer para entrada suave
-            const observerOptions = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.12
-            };
-
-            const luminaeObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Ativa todos os elementos animados dentro desta seção
-                        const animElements = entry.target.querySelectorAll('.luminae-animate');
-                        animElements.forEach(el => {
-                            el.classList.add('luminae-active');
-                        });
-                        // Cancela observação para rodar a animação apenas uma vez
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const testimonialsSection = document.getElementById('depoimentos');
-            if (testimonialsSection) {
-                luminaeObserver.observe(testimonialsSection);
-            }
-        } else {
-            // Se o AOS existir, garantimos que todos os elementos tenham suas classes de fallback ativadas
-            // para que a biblioteca AOS assuma o controle sem conflitos
-            const animElements = document.querySelectorAll('.luminae-animate');
-            animElements.forEach(el => {
-                el.classList.add('luminae-active');
-            });
-        }
-    });
-</script>
 
     <!-- =====================
          08. CTA FINAL
