@@ -3,14 +3,7 @@ const heroVideo = document.querySelector('.hero__video');
 if (heroVideo) {
   heroVideo.muted = true;
   heroVideo.playbackRate = 1.0;
-
-  const tryPlay = () => heroVideo.play().catch(() => {});
-
-  if (heroVideo.readyState >= 2) {
-    tryPlay();
-  } else {
-    heroVideo.addEventListener('canplay', tryPlay, { once: true });
-  }
+  heroVideo.play().catch(() => {});
 }
 
 // Iguala altura dos cards de processo no desktop
