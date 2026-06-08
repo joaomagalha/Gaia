@@ -1,0 +1,208 @@
+/* ===================================
+   PROJETO INDIVIDUAL — estilos específicos
+=================================== */
+
+/* Hero do projeto */
+.proj-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 48rem;
+  max-height: 72rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.proj-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.proj-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(18, 22, 15, 0.92) 0%,
+    rgba(18, 22, 15, 0.45) 50%,
+    rgba(18, 22, 15, 0.15) 100%
+  );
+}
+
+.proj-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.proj-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 1.3rem;
+  font-weight: var(--weight-medium);
+  color: rgba(250, 248, 244, 0.65);
+  text-decoration: none;
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.proj-hero__back:hover {
+  color: var(--color-stone);
+}
+
+.proj-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: var(--tracking-snug);
+  line-height: var(--leading-display);
+  max-width: 72rem;
+}
+
+.proj-hero__loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.4rem;
+  color: rgba(250, 248, 244, 0.6);
+}
+
+/* Conteúdo do projeto */
+.proj-content {
+  background: var(--color-white);
+  padding: var(--space-5xl) 0;
+}
+
+.proj-content__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4xl);
+}
+
+@media (min-width: 1024px) {
+  .proj-content__grid {
+    grid-template-columns: 1fr 34rem;
+    align-items: start;
+  }
+}
+
+.proj-content__main h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest);
+  letter-spacing: var(--tracking-snug);
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-3xl);
+}
+
+.proj-content__main h2:first-child {
+  margin-top: 0;
+}
+
+.proj-content__main p {
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-md);
+}
+
+.proj-content__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.proj-content__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  line-height: var(--leading-body);
+}
+
+.proj-content__list li i {
+  color: var(--color-primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Card lateral de detalhes */
+.proj-content__aside {
+  position: sticky;
+  top: calc(80px + var(--space-xl));
+}
+
+.proj-aside-card {
+  background: var(--color-stone);
+  border: 1px solid rgba(46, 50, 36, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+}
+
+.proj-aside-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(46, 50, 36, 0.1);
+}
+
+.proj-aside-card__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.proj-aside-card__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.proj-aside-card__label {
+  font-size: 1.1rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-overline);
+  color: var(--color-mist);
+}
+
+.proj-aside-card__val {
+  font-size: 1.5rem;
+  color: var(--color-deep);
+  font-weight: var(--weight-medium);
+}
+
+/* Seção de outros projetos */
+.proj-related {
+  background: var(--color-stone);
+  padding: var(--space-5xl) 0;
+}
+
+.proj-related__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest);
+  letter-spacing: var(--tracking-snug);
+  margin-bottom: var(--space-2xl);
+}
