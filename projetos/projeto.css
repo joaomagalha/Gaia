@@ -35,15 +35,9 @@
 
 @media (max-width: 767px) {
   .btn-back {
-    top: auto;
-    bottom: 2rem;
-    left: 1.6rem;
-    transform: none;
+    left: 1rem;
     width: 4rem;
     height: 4rem;
-  }
-  .btn-back:hover {
-    transform: translateX(-3px);
   }
 }
 
