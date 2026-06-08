@@ -1,3 +1,12 @@
+// Força reprodução automática do vídeo hero em mobile
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {
+    document.addEventListener('touchstart', () => heroVideo.play(), { once: true, passive: true });
+  });
+}
+
 // Iguala altura dos cards de processo no desktop
 function equalizeProcessCards() {
   const cards = document.querySelectorAll('.process__card');

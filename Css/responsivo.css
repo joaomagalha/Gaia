@@ -6,6 +6,10 @@
     display: none;
   }
 
+  .hero__actions {
+    flex-wrap: wrap;
+  }
+
   .about__stat-card {
     display: none;
   }
@@ -53,13 +57,13 @@
   }
 
   .btn {
-    font-size: var(--text-btn);
-    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
+    padding: 1.4rem 2.4rem;
   }
 
   .btn--lg {
-    padding: 1.6rem 3.2rem;
-    font-size: 1.6rem;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.4rem;
   }
 
   /* Numbers — 4 colunas com separador vertical */
@@ -218,27 +222,9 @@
   .process__card:nth-child(5) { grid-column: 4 / 6; }
 
   .process__card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-md);
     padding: var(--space-2xl);
     height: 100%;
     box-sizing: border-box;
-  }
-
-  /* número ghost no desktop */
-  .process__num {
-    font-size: 5.6rem;
-    top: var(--space-lg);
-    right: var(--space-2xl);
-  }
-
-  .process__badge {
-    margin-bottom: var(--space-xs);
-  }
-
-  .process__card-body {
-    padding-top: 0;
   }
 
   /* Testimonials */
