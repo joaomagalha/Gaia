@@ -1453,19 +1453,29 @@ button {
               box-shadow var(--transition-base);
 }
 
-/* Grid de fundo — visível só no hover */
+/* Grid de fundo — mascarado ao spotlight, só aparece onde o mouse está */
 .process__card::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--transition-base);
   z-index: 0;
+  -webkit-mask-image: radial-gradient(
+    circle 14rem at var(--card-x, 50%) var(--card-y, 50%),
+    black 0%,
+    transparent 70%
+  );
+  mask-image: radial-gradient(
+    circle 14rem at var(--card-x, 50%) var(--card-y, 50%),
+    black 0%,
+    transparent 70%
+  );
 }
 
 .process__card:hover::before {
@@ -1478,8 +1488,8 @@ button {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    circle 16rem at var(--card-x, 50%) var(--card-y, 50%),
-    rgba(138, 148, 112, 0.18) 0%,
+    circle 14rem at var(--card-x, 50%) var(--card-y, 50%),
+    rgba(138, 148, 112, 0.16) 0%,
     transparent 70%
   );
   pointer-events: none;
