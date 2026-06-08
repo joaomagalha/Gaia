@@ -10,16 +10,6 @@
     flex-wrap: wrap;
   }
 
-  /* Mobile: substitui vídeo por imagem estática (autoplay bloqueado na maioria dos browsers) */
-  .hero__video {
-    display: none;
-  }
-
-  .hero__bg {
-    background-image: url('../Imagens/Floresta/arvores.jpg');
-    background-size: cover;
-    background-position: center;
-  }
 
   .about__stat-card {
     display: none;

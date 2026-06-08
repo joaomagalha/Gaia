@@ -25,15 +25,8 @@
 
   <link rel="icon" href="Imagens/Logo/favicon.png" type="image/png">
 
-  <!-- Pré-carrega o vídeo hero apenas em telas não-mobile -->
-  <script>
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      var l = document.createElement('link');
-      l.rel = 'preload'; l.as = 'video';
-      l.href = 'Videos/hero.mp4'; l.type = 'video/mp4';
-      document.head.appendChild(l);
-    }
-  </script>
+  <!-- Pré-carrega o vídeo hero para garantir início imediato -->
+  <link rel="preload" href="Videos/hero.mp4" as="video" type="video/mp4">
 </head>
 <body>
 

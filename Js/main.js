@@ -1,14 +1,11 @@
-// Vídeo hero — só exibido no desktop via CSS; mobile usa imagem estática
+// Vídeo hero — autoplay em todos os dispositivos
 const heroVideo = document.querySelector('.hero__video');
-if (heroVideo && window.matchMedia('(min-width: 768px)').matches) {
+if (heroVideo) {
   heroVideo.muted = true;
   heroVideo.playbackRate = 1.0;
 
-  const tryPlay = () => {
-    heroVideo.play().catch(() => {});
-  };
+  const tryPlay = () => heroVideo.play().catch(() => {});
 
-  // readyState >= 2 (HAVE_CURRENT_DATA) → vídeo já pronto, play imediato
   if (heroVideo.readyState >= 2) {
     tryPlay();
   } else {
