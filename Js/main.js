@@ -1,16 +1,19 @@
-// Vídeo hero — só roda no desktop (mobile usa imagem via CSS)
+// Vídeo hero — só exibido no desktop via CSS; mobile usa imagem estática
 const heroVideo = document.querySelector('.hero__video');
 if (heroVideo && window.matchMedia('(min-width: 768px)').matches) {
   heroVideo.muted = true;
   heroVideo.playbackRate = 1.0;
 
-  const playVideo = () => {
-    heroVideo.currentTime = 0;
+  const tryPlay = () => {
     heroVideo.play().catch(() => {});
   };
 
-  heroVideo.addEventListener('canplay', playVideo, { once: true });
-  heroVideo.play().catch(() => {});
+  // readyState >= 2 (HAVE_CURRENT_DATA) → vídeo já pronto, play imediato
+  if (heroVideo.readyState >= 2) {
+    tryPlay();
+  } else {
+    heroVideo.addEventListener('canplay', tryPlay, { once: true });
+  }
 }
 
 // Iguala altura dos cards de processo no desktop

@@ -24,6 +24,16 @@
   <link rel="stylesheet" href="Css/responsivo.css">
 
   <link rel="icon" href="Imagens/Logo/favicon.png" type="image/png">
+
+  <!-- Pré-carrega o vídeo hero apenas em telas não-mobile -->
+  <script>
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      var l = document.createElement('link');
+      l.rel = 'preload'; l.as = 'video';
+      l.href = 'Videos/hero.mp4'; l.type = 'video/mp4';
+      document.head.appendChild(l);
+    }
+  </script>
 </head>
 <body>
 
@@ -123,7 +133,7 @@
     ===================== -->
     <section class="hero" id="home" aria-label="Apresentação">
       <div class="hero__bg">
-        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="Imagens/Floresta/arvores.jpg" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="Imagens/Floresta/arvores.jpg" aria-hidden="true">
           <source src="Videos/hero.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
