@@ -62,7 +62,7 @@
       <img class="proj-hero__img" src="../../Imagens/Imagens Fornecidas/Recuperação de Áreas Degradadas.jpeg" alt="Recuperação de Áreas Degradadas">
       <div class="proj-hero__overlay"></div>
       <div class="container proj-hero__content">
-        <a href="/projetos/" class="proj-hero__back"><i class="fa-solid fa-arrow-left"></i> Todos os projetos</a>
+        <a href="/#projetos" class="proj-hero__back"><i class="fa-solid fa-arrow-left"></i> Todos os projetos</a>
         <span class="proj-card__badge"><i class="fa-solid fa-leaf"></i>PRAD</span>
         <h1 class="proj-hero__title">Recuperação de Áreas Degradadas</h1>
         <p class="proj-hero__loc"><i class="fa-solid fa-location-dot"></i> Mato Grosso</p>
@@ -135,5 +135,6 @@
     const di=document.querySelector('.navbar__item--dropdown'),db=document.querySelector('.navbar__link--dropdown');
     if(db){db.addEventListener('click',()=>{const o=di.classList.toggle('open');db.setAttribute('aria-expanded',String(o));});document.addEventListener('click',e=>{if(!di.contains(e.target)){di.classList.remove('open');db.setAttribute('aria-expanded','false');}});}
   </script>
+<script>var b=document.querySelector(".proj-hero__back");if(b)b.addEventListener("click",function(e){if(history.length>1){e.preventDefault();history.back();}});</script>
 </body>
 </html>

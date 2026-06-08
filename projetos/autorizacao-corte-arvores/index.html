@@ -21,7 +21,7 @@
       <img class="proj-hero__img" src="../../Imagens/Imagens Fornecidas/Autorização de Corte de Árvores Isoladas.JPG" alt="Autorização de Corte de Árvores Isoladas">
       <div class="proj-hero__overlay"></div>
       <div class="container proj-hero__content">
-        <a href="/projetos/" class="proj-hero__back"><i class="fa-solid fa-arrow-left"></i> Todos os projetos</a>
+        <a href="/#projetos" class="proj-hero__back"><i class="fa-solid fa-arrow-left"></i> Todos os projetos</a>
         <span class="proj-card__badge"><i class="fa-solid fa-tree"></i>Regularização</span>
         <h1 class="proj-hero__title">Autorização de Corte de Árvores Isoladas</h1>
         <p class="proj-hero__loc"><i class="fa-solid fa-location-dot"></i> Mato Grosso</p>
@@ -66,4 +66,5 @@
   <footer class="footer"><div class="container footer__container"><div class="footer__brand"><img src="../../Imagens/Logo/Logo Branca - Svg.svg" alt="Gaia" class="footer__logo"><p class="footer__brand-desc">Consultoria ambiental para quem produz de verdade.</p></div><nav class="footer__nav"><div class="footer__col"><h4 class="footer__col-title">Contato</h4><ul class="footer__links"><li><a href="https://wa.me/5565999281805" class="footer__link" target="_blank"><i class="fa-brands fa-whatsapp"></i> (65) 99928-1805</a></li></ul></div></nav></div><div class="footer__bottom"><div class="container footer__bottom-container"><p class="footer__copy">© 2025 Gaia Soluções Ambientais.</p><div class="footer__social"><a href="https://wa.me/5565999281805" class="footer__social-link" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div></div></div></footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="../../Js/menu.js"></script>
   <script>AOS.init({duration:800,easing:'ease-out',once:true,offset:60});const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>80),{passive:true});const di=document.querySelector('.navbar__item--dropdown'),db=document.querySelector('.navbar__link--dropdown');if(db){db.addEventListener('click',()=>{const o=di.classList.toggle('open');db.setAttribute('aria-expanded',String(o));});document.addEventListener('click',e=>{if(!di.contains(e.target)){di.classList.remove('open');db.setAttribute('aria-expanded','false');}});}</script>
+<script>var b=document.querySelector(".proj-hero__back");if(b)b.addEventListener("click",function(e){if(history.length>1){e.preventDefault();history.back();}});</script>
 </body></html>
