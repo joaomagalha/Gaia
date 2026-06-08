@@ -1626,6 +1626,38 @@ button {
 .projetos {
   background: var(--color-stone);
   padding: var(--space-5xl) 0;
+  position: relative;
+}
+
+/* DS3: linha divisória com gradiente centrado + ponto sage */
+.projetos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(138, 148, 112, 0.45) 30%,
+    rgba(138, 148, 112, 0.45) 70%,
+    transparent 100%
+  );
+}
+
+.projetos::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  opacity: 0.6;
 }
 
 .projetos__head {
