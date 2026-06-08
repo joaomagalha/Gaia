@@ -20,6 +20,7 @@
 <body>
 
   <!-- NAVBAR -->
+  <a href="/#projetos" class="btn-back" id="btnBack" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
   <header class="navbar" id="navbar">
     <div class="navbar__container">
       <a href="../../" class="navbar__logo" aria-label="Gaia Soluções Ambientais — página inicial">
@@ -243,6 +244,6 @@
       });
     }
   </script>
-<script>var b=document.querySelector(".proj-hero__back");if(b)b.addEventListener("click",function(e){if(history.length>1){e.preventDefault();history.back();}});</script>
+<script>var back=function(e){if(history.length>1){e.preventDefault();history.back();}};[".proj-hero__back","#btnBack"].forEach(function(s){var el=document.querySelector(s);if(el)el.addEventListener("click",back);});</script>
 </body>
 </html>

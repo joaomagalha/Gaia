@@ -14,9 +14,12 @@
   <link rel="stylesheet" href="../Css/variables.css">
   <link rel="stylesheet" href="../Css/style.css">
   <link rel="stylesheet" href="../Css/responsivo.css">
+  <link rel="stylesheet" href="projeto.css">
   <link rel="icon" href="../Imagens/Logo/favicon.png" type="image/png">
 </head>
 <body>
+
+  <a href="/#projetos" class="btn-back" id="btnBack" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -249,6 +252,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../Js/menu.js"></script>
   <script>
+    var btnBack = document.getElementById('btnBack');
+    if (btnBack && history.length > 1) {
+      btnBack.addEventListener('click', function(e) { e.preventDefault(); history.back(); });
+    }
     AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 60 });
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {

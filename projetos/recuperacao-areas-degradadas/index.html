@@ -17,6 +17,7 @@
   <link rel="icon" href="../../Imagens/Logo/favicon.png" type="image/png">
 </head>
 <body>
+  <a href="/#projetos" class="btn-back" id="btnBack" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
   <header class="navbar" id="navbar">
     <div class="navbar__container">
       <a href="../../" class="navbar__logo"><img src="../../Imagens/Logo/Logo Branca - Svg.svg" alt="Gaia Soluções Ambientais" class="navbar__logo-img"></a>
@@ -135,6 +136,6 @@
     const di=document.querySelector('.navbar__item--dropdown'),db=document.querySelector('.navbar__link--dropdown');
     if(db){db.addEventListener('click',()=>{const o=di.classList.toggle('open');db.setAttribute('aria-expanded',String(o));});document.addEventListener('click',e=>{if(!di.contains(e.target)){di.classList.remove('open');db.setAttribute('aria-expanded','false');}});}
   </script>
-<script>var b=document.querySelector(".proj-hero__back");if(b)b.addEventListener("click",function(e){if(history.length>1){e.preventDefault();history.back();}});</script>
+<script>var back=function(e){if(history.length>1){e.preventDefault();history.back();}};[".proj-hero__back","#btnBack"].forEach(function(s){var el=document.querySelector(s);if(el)el.addEventListener("click",back);});</script>
 </body>
 </html>
