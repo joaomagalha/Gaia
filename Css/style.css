@@ -828,7 +828,7 @@ button {
 =================================== */
 .services {
   padding: var(--space-5xl) 0;
-  background: var(--color-white);
+  background: var(--color-stone);
 }
 
 /* Scrollable track */
@@ -937,6 +937,19 @@ button {
   height: 22rem;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
+}
+
+.service-card__img-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(30, 37, 24, 0.72) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .service-card__img {
@@ -951,33 +964,33 @@ button {
 }
 
 .service-card__body {
-  padding: var(--space-lg);
+  padding: var(--space-lg) var(--space-lg) var(--space-xl);
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   flex: 1;
 }
 
-/* DS3: tag de categoria — overline sage com traço */
+/* DS3: categoria como badge flutuante sobre a imagem */
 .service-card__category {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  z-index: 2;
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: var(--tracking-overline);
-  color: var(--color-sage);
+  color: var(--color-white);
+  background: rgba(138, 148, 112, 0.22);
+  border: 1px solid rgba(138, 148, 112, 0.45);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: var(--space-2xs);
-}
-
-.service-card__category::before {
-  content: "";
-  width: 1.6rem;
-  height: 1.5px;
-  background: var(--color-sage);
-  flex-shrink: 0;
 }
 
 .service-card__title {
@@ -1155,14 +1168,14 @@ button {
   margin-bottom: var(--space-lg);
 }
 
-.about__content p {
+.about__content p:not(.overline) {
   font-size: var(--text-body);
   color: #A3AB95;
   line-height: var(--leading-body);
   max-width: 60rem;
 }
 
-.about__content p + p {
+.about__content p:not(.overline) + p:not(.overline) {
   margin-top: var(--space-md);
 }
 
@@ -1368,29 +1381,58 @@ button {
 /* ===================================
    PROCESS
 =================================== */
-/* ===================================
-   PROCESS
-=================================== */
 .process {
   padding: var(--space-5xl) 0;
   background: rgb(250, 248, 244);
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.process .section-header {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glow que segue o mouse — ativo só quando o cursor está na seção */
+.process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 55rem at var(--mouse-x) var(--mouse-y),
+    rgba(138, 148, 112, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.process.mouse-inside::before {
+  opacity: 1;
 }
 
 /* Mobile: stack de cards */
 .process__steps {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-lg);
+  position: relative;
+  z-index: 1;
 }
 
-/* DS3: card com borda sutil, radius lg e overflow para o número ghost */
+/* Card vertical escuro com tom de verde floresta */
 .process__card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-lg);
-  background: var(--color-white);
+  gap: var(--space-md);
+  background: rgba(22, 38, 16, 0.72);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(46, 50, 36, 0.09);
+  border: 1px solid rgba(46, 50, 36, 0.14);
   padding: var(--space-xl);
   position: relative;
   overflow: hidden;
@@ -1398,68 +1440,96 @@ button {
               box-shadow var(--transition-base);
 }
 
-.process__card:hover {
-  border-color: rgba(138, 148, 112, 0.4);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(30, 37, 24, 0.08);
+/* Grid de fundo — visível só no hover */
+.process__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 0;
 }
 
-/* DS3: ícone quadrado com tint sage — como o icon-card do DS3 */
+.process__card:hover::before {
+  opacity: 1;
+}
+
+/* Glow local que segue o mouse dentro de cada card */
+.process__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 16rem at var(--card-x, 50%) var(--card-y, 50%),
+    rgba(138, 148, 112, 0.18) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.process__card:hover::after {
+  opacity: 1;
+}
+
+.process__card:hover {
+  border-color: rgba(138, 148, 112, 0.28);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(30, 37, 24, 0.10);
+}
+
+/* Ícone circular sage */
 .process__badge {
-  width: 4.4rem;
-  height: 4.4rem;
-  border-radius: var(--radius-md);
-  background: rgba(138, 148, 112, 0.10);
-  border: 1px solid rgba(138, 148, 112, 0.22);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: rgba(138, 148, 112, 0.08);
+  border: 1px solid rgba(138, 148, 112, 0.2);
   color: var(--color-sage);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   flex-shrink: 0;
-  transition: background var(--transition-base), border-color var(--transition-base),
-              color var(--transition-base);
+  position: relative;
+  z-index: 1;
+  transition: background var(--transition-base), border-color var(--transition-base);
 }
 
 .process__card:hover .process__badge {
-  background: rgba(138, 148, 112, 0.18);
-  border-color: rgba(138, 148, 112, 0.4);
-  color: var(--color-primary);
+  background: rgba(138, 148, 112, 0.14);
+  border-color: rgba(138, 148, 112, 0.35);
 }
 
 /* Step body */
 .process__card-body {
-  padding-top: 0.2rem;
+  padding-top: 0;
   min-width: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-/* DS3: número ghost posicionado no canto do card */
-.process__num {
-  position: absolute;
-  top: var(--space-md);
-  right: var(--space-lg);
-  font-family: var(--font-display);
-  font-size: 4.4rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: rgba(74, 82, 51, 0.06);
-  pointer-events: none;
-  user-select: none;
-}
 
 .process__title {
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 2vw, 2rem);
   font-weight: var(--weight-semibold);
-  color: var(--color-forest);
+  color: var(--color-stone);
   margin-bottom: var(--space-xs);
   line-height: var(--leading-display);
 }
 
 .process__desc {
   font-size: var(--text-body);
-  color: var(--color-mist);
+  color: #A3AB95;
   line-height: var(--leading-body);
   max-width: 44rem;
 }
@@ -1726,6 +1796,21 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.testimonials__intro .overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.testimonials__intro .overline::before {
+  content: "";
+  width: 2.8rem;
+  height: 2px;
+  background: var(--color-sage);
+  flex-shrink: 0;
 }
 
 .testimonials__intro h2 {
