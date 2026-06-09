@@ -391,54 +391,84 @@
           <p class="section-header__sub">Do contato inicial à entrega final, cada etapa é conduzida com transparência, rigor técnico e responsabilidade.</p>
         </div>
 
-        <div class="process__steps">
+        <div class="process__accordion" id="processAccordion" data-aos="fade-up">
 
-          <div class="process__card" data-aos="fade-up" data-aos-delay="0">
-            <div class="process__badge" aria-hidden="true">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="process__card-body">
-              <h3 class="process__title">Análise Inicial</h3>
+          <div class="process__item process__item--open">
+            <button class="process__header" aria-expanded="true">
+              <div class="process__header-left">
+                <div class="process__badge" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div>
+                  <span class="process__step-num">01</span>
+                  <h3 class="process__title">Análise Inicial</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down process__chevron" aria-hidden="true"></i>
+            </button>
+            <div class="process__body">
               <p class="process__desc">Entendemos a situação atual da propriedade e identificamos as necessidades de regularização e gestão ambiental.</p>
             </div>
           </div>
 
-          <div class="process__card" data-aos="fade-up" data-aos-delay="80">
-            <div class="process__badge" aria-hidden="true">
-              <i class="fa-solid fa-list-check"></i>
-            </div>
-            <div class="process__card-body">
-              <h3 class="process__title">Planejamento</h3>
+          <div class="process__item">
+            <button class="process__header" aria-expanded="false">
+              <div class="process__header-left">
+                <div class="process__badge" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
+                <div>
+                  <span class="process__step-num">02</span>
+                  <h3 class="process__title">Planejamento</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down process__chevron" aria-hidden="true"></i>
+            </button>
+            <div class="process__body">
               <p class="process__desc">Definimos o escopo, os documentos necessários e o cronograma de execução de forma clara e transparente.</p>
             </div>
           </div>
 
-          <div class="process__card" data-aos="fade-up" data-aos-delay="160">
-            <div class="process__badge" aria-hidden="true">
-              <i class="fa-solid fa-compass"></i>
-            </div>
-            <div class="process__card-body">
-              <h3 class="process__title">Levantamento em Campo</h3>
+          <div class="process__item">
+            <button class="process__header" aria-expanded="false">
+              <div class="process__header-left">
+                <div class="process__badge" aria-hidden="true"><i class="fa-solid fa-compass"></i></div>
+                <div>
+                  <span class="process__step-num">03</span>
+                  <h3 class="process__title">Levantamento em Campo</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down process__chevron" aria-hidden="true"></i>
+            </button>
+            <div class="process__body">
               <p class="process__desc">Nossa equipe técnica realiza visitas e coleta todos os dados necessários diretamente na propriedade.</p>
             </div>
           </div>
 
-          <div class="process__card" data-aos="fade-up" data-aos-delay="240">
-            <div class="process__badge" aria-hidden="true">
-              <i class="fa-solid fa-file-lines"></i>
-            </div>
-            <div class="process__card-body">
-              <h3 class="process__title">Execução Técnica</h3>
+          <div class="process__item">
+            <button class="process__header" aria-expanded="false">
+              <div class="process__header-left">
+                <div class="process__badge" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></div>
+                <div>
+                  <span class="process__step-num">04</span>
+                  <h3 class="process__title">Execução Técnica</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down process__chevron" aria-hidden="true"></i>
+            </button>
+            <div class="process__body">
               <p class="process__desc">Elaboramos os documentos, laudos e projetos com rigor técnico e dentro dos prazos acordados.</p>
             </div>
           </div>
 
-          <div class="process__card" data-aos="fade-up" data-aos-delay="320">
-            <div class="process__badge" aria-hidden="true">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <div class="process__card-body">
-              <h3 class="process__title">Suporte Contínuo</h3>
+          <div class="process__item">
+            <button class="process__header" aria-expanded="false">
+              <div class="process__header-left">
+                <div class="process__badge" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <span class="process__step-num">05</span>
+                  <h3 class="process__title">Suporte Contínuo</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down process__chevron" aria-hidden="true"></i>
+            </button>
+            <div class="process__body">
               <p class="process__desc">Acompanhamos todo o processo junto aos órgãos competentes e seguimos disponíveis após a entrega.</p>
             </div>
           </div>
@@ -516,48 +546,25 @@
          07. DEPOIMENTOS
     ===================== -->
     <section class="testimonials" id="depoimentos" aria-label="Depoimentos">
-      <div class="container">
-        <div class="testimonials__top">
-          <div class="testimonials__intro" data-aos="fade-right">
-            <p class="overline">Depoimentos</p>
-            <h2>O que nossos<br><em>clientes dizem</em></h2>
-            <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
-               class="btn btn--primary testimonials__cta"
-               target="_blank"
-               rel="noopener">
-              Fale com um especialista
-            </a>
-          </div>
+      <div class="testimonials__bg-glow" aria-hidden="true"></div>
+      <div class="testimonials__bg-grid" aria-hidden="true"></div>
 
-          <div class="testimonials__highlight" data-aos="fade-left" data-aos-delay="100">
-            <div class="testimonials__highlight-card">
-              <div class="testimonials__highlight-header">
-                <p class="testimonials__highlight-title">Regularização total em tempo recorde</p>
-                <div class="testimonials__highlight-stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-              </div>
-              <p>"Nunca imaginei que seria tão simples regularizar minha propriedade. A equipe da Gaia cuidou de tudo — do CAR ao licenciamento — com muita profissionalidade e agilidade."</p>
-              <div class="testimonials__metrics">
-                <div class="testimonials__metric">
-                  <span class="testimonials__metric-num">+200</span>
-                  <span class="testimonials__metric-label">Clientes atendidos</span>
-                </div>
-                <div class="testimonials__metric">
-                  <span class="testimonials__metric-num">98%</span>
-                  <span class="testimonials__metric-label">Taxa de aprovação</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container">
+
+        <div class="testimonials__header" data-aos="fade-up">
+          <p class="overline overline--light">Depoimentos</p>
+          <h2>O que nossos clientes dizem</h2>
         </div>
 
         <div class="testimonials__grid">
           <article class="testimonial-card" data-aos="fade-up">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
             <p class="testimonial-card__quote">"A Gaia foi essencial para regularizar nossa fazenda em Mato Grosso. Eles orientaram cada etapa do processo com clareza e comprometimento."</p>
             <footer class="testimonial-card__footer">
               <div class="testimonial-card__avatar" aria-hidden="true">CM</div>
@@ -569,6 +576,13 @@
           </article>
 
           <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
             <p class="testimonial-card__quote">"O licenciamento ambiental da nossa agroindústria estava parado há anos. Com a Gaia, conseguimos a aprovação em menos de 6 meses."</p>
             <footer class="testimonial-card__footer">
               <div class="testimonial-card__avatar" aria-hidden="true">RP</div>
@@ -580,6 +594,13 @@
           </article>
 
           <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card__stars" aria-label="5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
             <p class="testimonial-card__quote">"Além do CAR, fizeram o projeto de reflorestamento da nossa área de preservação. Trabalho impecável, com toda a documentação correta."</p>
             <footer class="testimonial-card__footer">
               <div class="testimonial-card__avatar" aria-hidden="true">JS</div>
@@ -590,6 +611,26 @@
             </footer>
           </article>
         </div>
+
+        <div class="testimonials__bottom" data-aos="fade-up">
+          <div class="testimonials__metrics">
+            <div class="testimonials__metric">
+              <span class="testimonials__metric-num">+200</span>
+              <span class="testimonials__metric-label">Clientes atendidos</span>
+            </div>
+            <div class="testimonials__metric">
+              <span class="testimonials__metric-num">98%</span>
+              <span class="testimonials__metric-label">Taxa de aprovação</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5565999281805?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+             class="btn btn--primary testimonials__cta"
+             target="_blank"
+             rel="noopener">
+            Fale com um especialista
+          </a>
+        </div>
+
       </div>
     </section>
 

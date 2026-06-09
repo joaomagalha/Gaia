@@ -6,30 +6,26 @@ if (heroVideo) {
   heroVideo.play().catch(() => {});
 }
 
-// Iguala altura dos cards de processo no desktop
-function equalizeProcessCards() {
-  const cards = document.querySelectorAll('.process__card');
-  if (!cards.length) return;
-  cards.forEach(c => (c.style.height = 'auto'));
-  if (window.innerWidth < 1024) return;
-  let max = 0;
-  cards.forEach(c => (max = Math.max(max, c.offsetHeight)));
-  cards.forEach(c => (c.style.height = max + 'px'));
+// Accordion "Como Trabalhamos" — abre um item e fecha os demais
+const processAccordion = document.getElementById('processAccordion');
+if (processAccordion) {
+  processAccordion.querySelectorAll('.process__header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.process__item');
+      const isOpen = item.classList.contains('process__item--open');
+
+      processAccordion.querySelectorAll('.process__item').forEach(i => {
+        i.classList.remove('process__item--open');
+        i.querySelector('.process__header').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('process__item--open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 }
-
-window.addEventListener('load',   equalizeProcessCards);
-window.addEventListener('resize', equalizeProcessCards, { passive: true });
-
-// Glow local dentro de cada card de processo
-document.querySelectorAll('.process__card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty('--card-x', x + '%');
-    card.style.setProperty('--card-y', y + '%');
-  }, { passive: true });
-});
 
 // AOS
 AOS.init({
