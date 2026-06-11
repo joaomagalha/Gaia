@@ -1412,9 +1412,29 @@ button {
   z-index: 1;
 }
 
-.process__accordion {
+.process__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+  align-items: stretch;
   max-width: 80rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .process__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    max-width: var(--container-max);
+  }
+}
+
+.process__accordion {
+  width: 100%;
   position: relative;
   z-index: 1;
   background: rgba(22, 38, 16, 0.75);
@@ -1422,6 +1442,82 @@ button {
   border: 1px solid rgba(138, 148, 112, 0.15);
   overflow: hidden;
 }
+
+.process__image-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(138, 148, 112, 0.15);
+  box-shadow: var(--shadow-lg);
+  min-height: 38rem;
+  display: flex;
+}
+
+.process__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.process__image-container:hover .process__image {
+  transform: scale(1.04);
+}
+
+/* Gradient Overlay to harmonize color and match theme */
+.process__image-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 37, 24, 0.05) 0%,
+    rgba(30, 37, 24, 0.35) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating badge */
+.process__image-badge {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  background: rgba(28, 34, 22, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.8rem;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-stone);
+  font-size: 1.2rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.process__image-badge i {
+  color: var(--color-sage);
+}
+
+.process__image-container:hover .process__image-badge {
+  transform: translateY(-2px);
+  background: rgba(28, 34, 22, 0.95);
+}
+
+@media (min-width: 1024px) {
+  .process__image-container {
+    min-height: 100%;
+  }
+}
+
 
 .process__item {
   border-bottom: 1px solid rgba(138, 148, 112, 0.12);
