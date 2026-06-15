@@ -6,26 +6,6 @@ if (heroVideo) {
   heroVideo.play().catch(() => {});
 }
 
-// Accordion "Como Trabalhamos" — abre um item e fecha os demais
-const processAccordion = document.getElementById('processAccordion');
-if (processAccordion) {
-  processAccordion.querySelectorAll('.process__header').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.process__item');
-      const isOpen = item.classList.contains('process__item--open');
-
-      processAccordion.querySelectorAll('.process__item').forEach(i => {
-        i.classList.remove('process__item--open');
-        i.querySelector('.process__header').setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        item.classList.add('process__item--open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-}
 
 // AOS
 AOS.init({
@@ -71,3 +51,51 @@ if (dropdownBtn) {
     }
   });
 }
+
+// ===================================
+// CTA FINAL — Scroll-reveal + Parallax
+// ===================================
+(function initCtaFinal() {
+  const section = document.getElementById('cta-final');
+  if (!section) return;
+
+  const content = section.querySelector('.cta-final__content');
+  const media   = section.querySelector('.cta-final__media');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* — Scroll-reveal entrance — */
+  if (content) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            content.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(section);
+  }
+
+  /* — Subtle parallax (desktop only, no reduced-motion) — */
+  if (media && !prefersReduced && window.innerWidth >= 768) {
+    let rafId = null;
+
+    function updateParallax() {
+      const rect     = section.getBoundingClientRect();
+      const progress = rect.top / window.innerHeight;   // -1 → 1
+      const offset   = progress * 40;                   // ± 40 px max
+      section.style.setProperty('--cta-parallax', offset.toFixed(2));
+      rafId = null;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!rafId) rafId = requestAnimationFrame(updateParallax);
+    }, { passive: true });
+
+    updateParallax(); // initial call
+  }
+})();
+
