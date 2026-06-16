@@ -394,14 +394,15 @@ button {
   right: 0;
   bottom: 0;
   width: 85%;
-  max-width: 36rem;
-  background: var(--color-deep);
+  max-width: 34rem;
+  background: #0E1209;
   z-index: 200;
   transform: translateX(100%);
   transition: transform var(--transition-slow);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .mobile-menu.active {
@@ -412,95 +413,117 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 2.4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.2rem 2.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
 }
 
 .mobile-menu__logo {
-  height: 3.2rem;
+  height: 3rem;
   width: auto;
 }
 
 .mobile-menu__close {
-  color: var(--color-white);
-  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.8rem;
   padding: var(--space-xs);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-sm);
   transition: color var(--transition-fast);
 }
 
 .mobile-menu__close:hover {
-  color: var(--color-sage);
+  color: var(--color-white);
 }
 
 .mobile-menu__nav {
   flex: 1;
-  padding: var(--space-lg);
+  padding: var(--space-xl) 2.8rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
 .mobile-menu__links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
 }
 
 .mobile-menu__link {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: var(--weight-medium);
-  color: var(--color-white);
-  padding: 1.2rem var(--space-sm);
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-fast);
-  display: block;
+  color: var(--color-stone);
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu__link::after {
+  content: '';
+  width: 1.6rem;
+  height: 1px;
+  background: var(--color-sage);
+  opacity: 0;
+  transition: opacity var(--transition-fast), width var(--transition-fast);
 }
 
 .mobile-menu__link:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.mobile-menu__group-label {
-  font-size: 1.1rem;
-  font-weight: var(--weight-medium);
-  color: var(--color-sage);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-overline);
-  padding: var(--space-lg) var(--space-sm) var(--space-xs);
-  display: block;
-}
-
-.mobile-menu__sublinks {
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-menu__sublink {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.65);
-  padding: 1rem var(--space-md);
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-fast), color var(--transition-fast);
-  display: block;
-}
-
-.mobile-menu__sublink:hover {
-  background: rgba(255, 255, 255, 0.07);
   color: var(--color-white);
 }
 
+.mobile-menu__link:hover::after {
+  opacity: 1;
+  width: 2.4rem;
+}
+
+.mobile-menu__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mobile-menu__section-label {
+  font-size: 1.05rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-sage);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-overline);
+}
+
+.mobile-menu__service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu__service-link {
+  font-size: 1.45rem;
+  font-weight: var(--weight-regular);
+  color: rgba(250, 248, 244, 0.45);
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu__service-link:hover {
+  color: var(--color-stone);
+}
+
 .mobile-menu__footer {
-  padding: var(--space-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.4rem 2.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
 }
 
 .mobile-menu__cta {
   width: 100%;
   justify-content: center;
+  gap: var(--space-sm);
 }
 
 /* ===================================
