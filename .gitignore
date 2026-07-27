@@ -2,3 +2,13 @@
 .DS_Store
 **/.DS_Store
 .vscode/
+
+# Referências de design e materiais de trabalho (não fazem parte do site)
+/referências/
+/design_system3.html
+/Instagram story - 2.png
+/Videos/*
+!/Videos/hero.mp4
+/Imagens/Svg/
+/Imagens/Texturas/
+/Imagens/Undraw/
