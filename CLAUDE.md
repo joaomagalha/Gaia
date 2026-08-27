@@ -83,3 +83,13 @@ Prioridades: legibilidade, escalabilidade, performance e boa distribuição dos 
 ## Diretrizes de UX/UI
 
 Ao sugerir ou implementar mudanças: priorizar clareza visual, espaçamentos consistentes, boa hierarquia e **foco em conversão**. Facilitar o acesso ao WhatsApp. Considerar mobile antes do desktop.
+
+## Vault (Cofre João)
+
+Este repo é o código; o relacionamento com o cliente (contrato, status,
+pendências, histórico de decisões de negócio) vive fora daqui, no vault
+pessoal do João: `/Users/joaovictor/João/Pessoal/Cofre João/clientes/gaia-solucoes-ambientais/gaia-solucoes-ambientais.md`
+e `/Users/joaovictor/João/Pessoal/Cofre João/projetos/gaia-solucoes-ambientais.md`.
+Sessão aberta direto neste repo não carrega esse contexto automaticamente
+— leia esse(s) arquivo(s) antes de assumir que algo não foi decidido ou
+combinado com o cliente.
